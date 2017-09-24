@@ -11,12 +11,13 @@ import UIKit
 class FirstViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
     
     @IBOutlet weak var foodCollection: UICollectionView!
+    
     var restList:[String] = []
-    var restImage = ["akuru","buera","dou","en","fam","furusato","gusto","haisai","hoo","ikki","kagura","kaihou","kasa","katsuo","kiyoi","les","nana","ouchi","party","pure","rai","ri-hu","saigou","sama","sasagawa","seriyosa","shiosai","sou","taiko","terumani","thiza","tougura","ryphoon","zen"]
+    var restImage = ["party","fam","les","typhoon","buera","gusto","saigou","ouchi","terumani","abashi","akuru","thiza","pure","seriyosa","rai","katuo","tougura","haisai","sasagawa","kaikou","furusato","zen","rihu","sky","kiyoi","nana","kagura","sou","ikki","dou","sama","shunkou","shou","kaihou","shiosai","taiko","en","hoo","kasa"]
     
     var selectedImage: UIImage?
     var selectedRest = ""
-    
+
     //セルの取得
      func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
          let cell:UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
@@ -34,9 +35,6 @@ class FirstViewController: UIViewController,UICollectionViewDelegate,UICollectio
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return restList.count
     }
-    
-    
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,30 +50,49 @@ class FirstViewController: UIViewController,UICollectionViewDelegate,UICollectio
             restList.append(key as! String)
            // selectedImage.image = UIImage(named: dicForData["image"] as! String)
         }
+        restList.sort(by: {$0 < $1})
         print(restList)
-
-        
     }
-    
+
     //選択されたセル
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectedRest = restList[indexPath.row]
-        performSegue(withIdentifier: "showDetail", sender: nil)
+        performSegue(withIdentifier: "showEatDetail", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
-        if segue.identifier == "showDetail" {
+        if segue.identifier == "showEatDetail" {
             let dv = (segue.destination as? DetailViewController)!
             dv.scSelectedRest = selectedRest
         }
     }
 
+    @IBAction func backTo(segue:UIStoryboardSegue){
+        
+    }
 
+    
+    @IBAction func tapRec(_ sender: UIButton) {
+    
+    //オススメボタンが押された時
+    let ranRes = Int(arc4random()) % restImage.count
+    
+    let alert = UIAlertController(title: "       おすすめ", message:"", preferredStyle: .alert)
+    
+    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+    
+    //アラートにimageを表示
+//        alert.addAction(alert)
+        let imageView = UIImageView(frame: CGRect(x:0, y:0, width:100, height:100))
+        imageView.image = UIImage(named: restImage[ranRes])
+            alert.view.addSubview(imageView)
+
+    present(alert,animated: true, completion: nil)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
        
     }
 
-
 }
-

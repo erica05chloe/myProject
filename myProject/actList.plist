@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Shimayado 當</key>
+	<dict>
+		<key>inform</key>
+		<string>0997-84-3807
+チェックイン 15:00／チェックアウト 10:00
+定休日：不定休</string>
+		<key>description</key>
+		<string>沖永良部島に暮らす様に過ごす』をコンセプトに夫婦２人で経営しております。島特有の自然を生かした『ケイビング』や『スタンドアップパドルボード』の体験レッスンも島内で唯一行っている宿となっております。（ご予約はHPをご覧下さい／当日の予約不可）</string>
+		<key>image</key>
+		<string>sup.jpg</string>
+		<key>latitude</key>
+		<string>27.385156</string>
+		<key>longitude</key>
+		<string>128.540232</string>
+	</dict>
+	<key>Dive Time</key>
+	<dict>
+		<key>inform</key>
+		<string>0997-84-3496
+</string>
+		<key>description</key>
+		<string>ダイビングやスノーケリング等はもちろん、島滞在時間を有意義に過ごすお手伝いも致します♪お一人様からでも大歓迎！女性スタッフも一緒に海をご案内致しますので、女性お一人でのご来店、ご利用も安心です☆</string>
+		<key>image</key>
+		<string>dive.jpg</string>
+		<key>latitude</key>
+		<string>27.364969</string>
+		<key>longitude</key>
+		<string>128.53348</string>
+	</dict>
+	<key>沖永良部島エコツアーネット</key>
+	<dict>
+		<key>inform</key>
+		<string>090-9491-6556
+9:00〜17:00
+定休日：なし</string>
+		<key>description</key>
+		<string>島のことを知ることが、島に興味を持つことにつながります。少しでも沖永良部島を深く知って興味を持ってもらえるようにお手伝いします。観光コース・陸上からのウミガメ観察・石垣巡り・自然散策・史跡巡り・バードウォッチング・湧水巡り・マスコミ関連対応・浜巡り・ウォーキングコースなどを希望に合わせて案内します。</string>
+		<key>image</key>
+		<string>eco.jpg</string>
+		<key>latitude</key>
+		<string>27.369386</string>
+		<key>longitude</key>
+		<string>128.624031</string>
+	</dict>
+	<key>高千穂カントリークラブ</key>
+	<dict>
+		<key>inform</key>
+		<string>0997-92-1826
+日の出～日没まで
+定休日：なし</string>
+		<key>description</key>
+		<string>南の島の小さなゴルフ場！18HOLE(PAR57)のショートコースです。貸しクラブ・シューズをご用意いたしております。お一人様でもラウンド可能です。</string>
+		<key>image</key>
+		<string>takachi.jpg</string>
+		<key>latitude</key>
+		<string>27.40528</string>
+		<key>longitude</key>
+		<string>128.6483</string>
+	</dict>
+	<key>沖永良部芭蕉布会館</key>
+	<dict>
+		<key>inform</key>
+		<string>0997-934753
+9:00〜17:00
+定休日：水曜日</string>
+		<key>description</key>
+		<string>芭蕉布は、芭蕉科・糸芭蕉の茎の繊維を使った南西諸島の伝統的な織物です。当工房では、糸芭蕉の原木栽培から織に至るまでのすべての工程を手作業で行い、染料も島の草木だけを使い古くから島に伝わる心技を継承しつつ。よりしなやかな風合いを古くから島に伝わる心技を継承しつつ、よりしなやかな風合いを求めて新しい技法を追及しています。</string>
+		<key>image</key>
+		<string>bashou.jpg</string>
+		<key>latitude</key>
+		<string>27.38422</string>
+		<key>longitude</key>
+		<string>128.564036</string>
+	</dict>
+	<key>沖永良部島ケイビングガイド連盟</key>
+	<dict>
+		<key>inform</key>
+		<string>0997-84-3335
+9:00～19:00
+定休日：なし</string>
+		<key>description</key>
+		<string>洞窟の聖地」沖永良部島で、神秘の洞窟探検ケイビングツアーに参加してみませんか？この島でしか味わえない冒険、感動、楽しさあふれる、ケイビングツアー！用意するものは最少で、着替えタオルのみ！！！帰る際にツアーの写真データとガイドの島への熱い気持ちをお渡しいたします♪</string>
+		<key>image</key>
+		<string>okik.jpg</string>
+		<key>latitude</key>
+		<string>27.331726</string>
+		<key>longitude</key>
+		<string>128.572267</string>
+	</dict>
+	<key>(社)沖永良部島ケイビング協会</key>
+	<dict>
+		<key>inform</key>
+		<string>0997-93-1700
+月-金 9:00〜18:00
+土 9:00〜13:00
+定休日：なし</string>
+		<key>description</key>
+		<string>沖永良部島で、驚きとワクワクがいっぱいの洞窟探検ケイビングツアーに参加してみませんか？貴重な沖永良部島の自然遺産・鍾乳洞に入る探検ツアーは、気軽に日常とは全く別の「異空間」そして「絶景」がお楽しみいただけます。</string>
+		<key>image</key>
+		<string>shac.jpg</string>
+		<key>latitude</key>
+		<string>27.333137</string>
+		<key>longitude</key>
+		<string>128.568931</string>
+	</dict>
+	<key>GTダイバーズ沖永良部島</key>
+	<dict>
+		<key>inform</key>
+		<string>0997-92-4566
+8:00～19:00
+定休日：なし</string>
+		<key>description</key>
+		<string>インストラクター夫婦が営むアットホームな雰囲気のお店。女性お一人様でも安心。大物派からマクロ派ダイバーまで幅広いお客様にリピートしていただいています。ポイント選定やコース取りなどリクエスト重視のスタイル。ドリフトもOK！</string>
+		<key>image</key>
+		<string>gt.jpg</string>
+		<key>latitude</key>
+		<string>27.394284</string>
+		<key>longitude</key>
+		<string>128.650206</string>
+	</dict>
+	<key>沖永良部島むがむがダイビング</key>
+	<dict>
+		<key>inform</key>
+		<string>0997-93-3390
+8:00〜18:00
+定休日：なし</string>
+		<key>description</key>
+		<string>はじめての方も気軽にご参加いただける体験ダイビングでは、人気のカクレクマノミやウミガメが見られます。また近年秘かに人気の不思議な形とキラキラ光る、浮遊期幼魚ナイトダイビングを開催中！
+沖永良部島ならではの絶好ポイントで不思議な形とキラキラ光る、浮遊期幼魚ナイトダイビングを体験してみませんか？</string>
+		<key>image</key>
+		<string>muga.jpg</string>
+		<key>latitude</key>
+		<string>27.332978</string>
+		<key>longitude</key>
+		<string>128.575188</string>
+	</dict>
+	<key>シードリーム沖永良部</key>
+	<dict>
+		<key>inform</key>
+		<string>0997-93-3395
+9:00〜17:00
+定休日：なし</string>
+		<key>description</key>
+		<string>島人オーナーのお店！島唯一のPADI正規認定店で講習・体験ダイビング・ファンダイビング、話題のナイトロックスもあります。快適・安全なダイビングで沖永良部島らしいダイビングをご提供します！</string>
+		<key>image</key>
+		<string>seadream.jpg</string>
+		<key>latitude</key>
+		<string>27.385365</string>
+		<key>longitude</key>
+		<string>128.562994</string>
+	</dict>
+</dict>
+</plist>

@@ -2,18 +2,65 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>New item - 2 - 2</key>
+	<key>旬香</key>
 	<dict>
 		<key>inform</key>
-		<string></string>
+		<string>0997-93-2399
+17:00〜23:00
+定休日：日曜日</string>
 		<key>description</key>
-		<string></string>
+		<string>優しくて、話し上手、聞き上手なママのいるお店！島料理のおまかせでコースがあります！チラガーやアロエの刺身、軟骨や島野菜の天ぷらなど、少しディープな島料理を召し上がりませんか？</string>
 		<key>image</key>
-		<string></string>
+		<string>shunkou.jpg</string>
 		<key>latitude</key>
-		<string></string>
+		<string>27.333178</string>
 		<key>longitude</key>
-		<string></string>
+		<string>128.577866</string>
+	</dict>
+	<key>大山スカイクラブ</key>
+	<dict>
+		<key>inform</key>
+		<string>090-4981-8513
+19:00～23:00
+定休日：不定休</string>
+		<key>description</key>
+		<string>アーミーファン垂涎の、航空自衛隊沖永良部分屯基地内にあるお店。隊員の方用のお店ですが、一般人も利用できます。お昼は定食屋さん、夜はバーとしてお越しください。</string>
+		<key>image</key>
+		<string>sky.jpg</string>
+		<key>latitude</key>
+		<string>27.366667</string>
+		<key>longitude</key>
+		<string>128.566667</string>
+	</dict>
+	<key>松竹</key>
+	<dict>
+		<key>inform</key>
+		<string>0997-92-1932
+11:30～14:00/18:00〜22:00
+定休日：日曜日・火曜(夜)</string>
+		<key>description</key>
+		<string>島の家庭料理が食べられるお店。定食メニューをはじめ、丼もの、鶏飯やソーキそばも！アバシ汁や山羊汁といった郷土料理も多く、ほっとするお店です。</string>
+		<key>image</key>
+		<string>shou.jpg</string>
+		<key>latitude</key>
+		<string>27.381538</string>
+		<key>longitude</key>
+		<string>128.616882</string>
+	</dict>
+	<key>アバシ庵</key>
+	<dict>
+		<key>inform</key>
+		<string>090-4986-5430
+18:00～24:00
+定休日：不定休</string>
+		<key>description</key>
+		<string>地元の人が毎日通う、親しみやすい居酒屋さん。「アバシ」は、方言でハリセンボンのこと。アバシの唐揚げやむじ炒めなどの島料理をご主人が腕を振るいます。黒糖焼酎も各種取り揃っています！</string>
+		<key>image</key>
+		<string>abashi.jpg</string>
+		<key>latitude</key>
+		<string>27.392112</string>
+		<key>longitude</key>
+		<string>128.656642</string>
 	</dict>
 	<key>おうちcafe</key>
 	<dict>
