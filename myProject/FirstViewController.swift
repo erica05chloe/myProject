@@ -8,15 +8,19 @@
 
 import UIKit
 
-class FirstViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
+class FirstViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UIPickerViewDataSource,UIPickerViewDelegate {
+    
+    private var myUIPicker: UIPickerView!
+    private let genre = ["洋食","和食","中華","島料理","カフェ","居酒屋","バー"]
     
     @IBOutlet weak var foodCollection: UICollectionView!
     
     var restList:[String] = []
-    var restImage = ["party","fam","les","typhoon","buera","gusto","saigou","ouchi","terumani","abashi","akuru","thiza","pure","seriyosa","rai","katuo","tougura","haisai","sasagawa","kaikou","furusato","zen","rihu","sky","kiyoi","nana","kagura","sou","ikki","dou","sama","shunkou","shou","kaihou","shiosai","taiko","en","hoo","kasa"]
+    var restImage = ["party","fam","level","les","typhoon","buera","free","gusto","saigou","ouchi","terumani","abashi","akuru","thiza","pure","seriyosa","rai","katuo","tougura","haisai","sasagawa","kaikou","furusato","zen","rihu","sky","kiyoi","nana","kagura","sou","ikki","dou","sama","shunkou","shou","kaihou","shiosai","taiko","en","hoo","kasa"]
     
     var selectedImage: UIImage?
     var selectedRest = ""
+    var selectedGenre = ""
 
     //セルの取得
      func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
@@ -35,7 +39,7 @@ class FirstViewController: UIViewController,UICollectionViewDelegate,UICollectio
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return restList.count
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -52,8 +56,31 @@ class FirstViewController: UIViewController,UICollectionViewDelegate,UICollectio
         }
         restList.sort(by: {$0 < $1})
         print(restList)
+        
+        //pickerviewの設定
+        myUIPicker = UIPickerView()
+        myUIPicker.frame = CGRect(x: 0, y: 0, width: 250.0, height: 120.0)
+        myUIPicker.delegate = self
+        myUIPicker.dataSource = self
+        self.view.addSubview(myUIPicker)
+        
     }
-
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return genre.count
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return genre[row] as? String
+    }
+    //pickerviewで選択された時
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        selectedGenre = genre[row]
+        performSegue(withIdentifier: "moreRest", sender: nil)
+    }
+    
     //選択されたセル
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectedRest = restList[indexPath.row]
@@ -64,35 +91,31 @@ class FirstViewController: UIViewController,UICollectionViewDelegate,UICollectio
         if segue.identifier == "showEatDetail" {
             let dv = (segue.destination as? DetailViewController)!
             dv.scSelectedRest = selectedRest
-        }
+//        }else if segue.identifier == "moreRest" {
+//                let dv = (segue.destination as? RestView)!
+//                dv.scSelectedGenre = selectedGenre
+       }
     }
-
-    @IBAction func backTo(segue:UIStoryboardSegue){
-        
-    }
-
-    
-    @IBAction func tapRec(_ sender: UIButton) {
-    
+    //itembtnが押された時
     //オススメボタンが押された時
-    let ranRes = Int(arc4random()) % restImage.count
-    
-    let alert = UIAlertController(title: "       おすすめ", message:"", preferredStyle: .alert)
-    
-    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-    
-    //アラートにimageを表示
-//        alert.addAction(alert)
-        let imageView = UIImageView(frame: CGRect(x:0, y:0, width:100, height:100))
-        imageView.image = UIImage(named: restImage[ranRes])
-            alert.view.addSubview(imageView)
-
-    present(alert,animated: true, completion: nil)
-    }
-    
+//    @IBAction func tapRec(_ sender: UIButton) {
+//
+//    let ranRes = Int(arc4random()) % restImage.count
+//    
+//    let alert = UIAlertController(title: "おすすめ", message:"", preferredStyle: .alert)
+//    
+//    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+//    
+//    //アラートにimageを表示
+//        let imageView = UIImageView(frame: CGRect(x:0, y:0, width:100, height:100))
+//        imageView.image = UIImage(named: restImage[ranRes])
+//            alert.view.addSubview(imageView)
+//
+//    present(alert,animated: true, completion: nil)
+//    }
+//    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
        
     }
-
 }

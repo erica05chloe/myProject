@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>izakaya</key>
+	<array>
+		<string>居酒屋　草</string>
+		<string>居酒屋　神蔵</string>
+		<string>焼肉居酒屋えん</string>
+		<string>居酒屋だりやみ処一気</string>
+		<string>炭火串焼処奄美太鼓</string>
+		<string>居酒屋　なな彩</string>
+	</array>
+	<key>cafe</key>
+	<array>
+		<string>おうちcafe</string>
+		<string>てるまに珈琲</string>
+		<string>Typhoon</string>
+	</array>
+	<key>shima</key>
+	<array>
+		<string>味処　ささがわ</string>
+		<string>えび料理　西郷食堂</string>
+		<string>味処ふるさと</string>
+		<string>台所Haisai</string>
+		<string>笑 ほお〜らしゃ</string>
+		<string>旬香</string>
+		<string>松竹</string>
+		<string>アバシ庵</string>
+		<string>海邦丸</string>
+		<string>島唄　道楽</string>
+		<string>左馬</string>
+	</array>
+	<key>bar</key>
+	<array>
+		<string>darts&amp;billiards FREE TRUNK</string>
+		<string>SALON BAR L&apos;espoir</string>
+		<string>Mixbar Level1</string>
+	</array>
+	<key>chinese</key>
+	<array>
+		<string>中華料理来来</string>
+	</array>
+	<key>japanese</key>
+	<array>
+		<string>味処　海幸</string>
+		<string>寿司割烹きよい</string>
+		<string>六覺燈 勝男</string>
+		<string>カレーハウスAkuru</string>
+		<string>ピュアゴールド宮花庭</string>
+		<string>和創作料理　膳</string>
+		<string>潮騒</string>
+		<string>笠石ファミリーランド</string>
+		<string>創作料理とうぐら</string>
+	</array>
+	<key>western</key>
+	<array>
+		<string>レストランせりよさ</string>
+		<string>喫茶リーフ</string>
+		<string>Familiar</string>
+		<string>cafe Buera</string>
+		<string>ティザーヌ</string>
+		<string>DiningBar Party</string>
+		<string>大山スカイクラブ</string>
+		<string>gusto</string>
+	</array>
+</dict>
+</plist>

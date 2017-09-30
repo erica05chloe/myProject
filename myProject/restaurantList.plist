@@ -2,6 +2,36 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>darts&amp;billiards FREE TRUNK</key>
+	<dict>
+		<key>inform</key>
+		<string>997-92-4178
+19:00〜24:00
+定休日：不定休</string>
+		<key>description</key>
+		<string>えらぶでダーツをするならここ！テキーラの種類も豊富で盛り上がること間違いなし。もちろんテーブルでゆっくり過ごすのもok♪オーダーで作ってくれるケーキが美味しいのもここです！</string>
+		<key>image</key>
+		<string>free.jpg</string>
+		<key>latitude</key>
+		<string>27.397142</string>
+		<key>longitude</key>
+		<string>128.660555</string>
+	</dict>
+	<key>Mixbar Level1</key>
+	<dict>
+		<key>inform</key>
+		<string>090-1929-6019
+19:00〜27:00
+定休日：月曜日</string>
+		<key>description</key>
+		<string>とにかくオーナーが愉快なレゲエバー！一人でも時間を忘れて長居しちゃうカウンター席がオススメ！お酒はもちろん、料理もがっつりからおつまみまで豊富です。</string>
+		<key>image</key>
+		<string>level.jpg</string>
+		<key>latitude</key>
+		<string>27.395856</string>
+		<key>longitude</key>
+		<string>128.658719</string>
+	</dict>
 	<key>旬香</key>
 	<dict>
 		<key>inform</key>

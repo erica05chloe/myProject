@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import WebKit
 
 class SecondViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource{
     
@@ -33,11 +34,17 @@ class SecondViewController: UIViewController,UICollectionViewDelegate,UICollecti
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return actList.count
     }
-
-
+   
+    @IBOutlet weak var webView: UIWebView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
        
+        //webview
+        let url = URL(string: "https://www.google.com/maps/d/embed?mid=18MI9u6nJfjb9W6jlzh3__tKlUH4&hl=en_US")
+        let request = URLRequest(url: url!)
+        webView.loadRequest(request)
+        
         //ファイルパスを取得
         let filePath = Bundle.main.path(forResource: "actList", ofType: "plist")
         
@@ -50,7 +57,6 @@ class SecondViewController: UIViewController,UICollectionViewDelegate,UICollecti
         }
         actList.sort(by: {$0 < $1})
         print(actList)
-        
         
     }
     
@@ -67,11 +73,6 @@ class SecondViewController: UIViewController,UICollectionViewDelegate,UICollecti
         }
     }
     
-    @IBAction func backTo(segue:UIStoryboardSegue){
-        
-    }
-
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
