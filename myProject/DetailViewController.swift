@@ -25,9 +25,9 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var myMap: MKMapView!
     
     //お気に入りbutton
-    @IBOutlet weak var addFav: UIButton!
-    let image0:UIImage = UIImage(named: "fav1.png")!
-    let image1:UIImage = UIImage(named: "fav2.png")!
+//    @IBOutlet weak var tapStar: UIButton!
+//    let image0:UIImage = UIImage(named: "fav1.png")!
+//    //let image1:UIImage = UIImage(named: "fav2.png")!
     
     var myDefault = UserDefaults.standard
     
@@ -36,10 +36,6 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
 
         //userdefaultでお気に入り登録
-
-//        var favArr :[[String : String]][ : ]
-//
-//
 //        myDefault.set(true, forKey:"fav")
 //
 //        if favArr == true {
@@ -119,15 +115,7 @@ class DetailViewController: UIViewController {
         var favArr:[String] = []
         
         if myDefault.object(forKey: "favArr") != nil{
-            favArr = myDefault.object(forKey: "favArr") as! [String]
-//            favArr.append(scSelectedRest)
-//            myDefault.set(favArr, forKey: "favArr")
-//            myDefault.synchronize()
-        }
-//        else{
-//            favArr = myDefault.object(forKey: "favArr") as! [String]
-//        };
-        
+            favArr = myDefault.object(forKey: "favArr") as! [String] }
         if (scSelectedAct == ""){
             
             favArr.append(scSelectedRest)

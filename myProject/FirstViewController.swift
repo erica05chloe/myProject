@@ -8,11 +8,11 @@
 
 import UIKit
 
-class FirstViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UIPickerViewDataSource,UIPickerViewDelegate {
+class FirstViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UIPickerViewDelegate,UIPickerViewDataSource{
     
     private var myUIPicker: UIPickerView!
     private let genre = ["洋食","和食","中華","島料理","カフェ","居酒屋","バー"]
-    
+
     @IBOutlet weak var foodCollection: UICollectionView!
     
     var restList:[String] = []
@@ -21,6 +21,7 @@ class FirstViewController: UIViewController,UICollectionViewDelegate,UICollectio
     var selectedImage: UIImage?
     var selectedRest = ""
     var selectedGenre = ""
+//    var sectionIndex:[String] = ["洋食","和食","中華","島料理","カフェ","居酒屋","バー"]
 
     //セルの取得
      func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
@@ -28,6 +29,7 @@ class FirstViewController: UIViewController,UICollectionViewDelegate,UICollectio
         
         let label = cell.contentView.viewWithTag(1) as! UILabel
         label.text = restList[indexPath.row]
+        
         
         let imageView = cell.contentView.viewWithTag(2) as! UIImageView
         imageView.image = UIImage(named: restImage[indexPath.row])
@@ -37,8 +39,23 @@ class FirstViewController: UIViewController,UICollectionViewDelegate,UICollectio
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
         return restList.count
     }
+    
+//    func numberOfSections(in collectionView: UICollectionView) -> Int {
+//        return sectionIndex.count
+//    }
+//    
+//    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView
+//    {
+//        let testSection = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "TestSection", for: indexPath as IndexPath) as! TestCollectionReusableView
+//        
+//        testSection.testLabel.text = sectionIndex[indexPath.section]
+//        
+//        return testSection
+//    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,7 +80,7 @@ class FirstViewController: UIViewController,UICollectionViewDelegate,UICollectio
         myUIPicker.delegate = self
         myUIPicker.dataSource = self
         self.view.addSubview(myUIPicker)
-        
+
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -80,7 +97,7 @@ class FirstViewController: UIViewController,UICollectionViewDelegate,UICollectio
         selectedGenre = genre[row]
         performSegue(withIdentifier: "moreRest", sender: nil)
     }
-    
+
     //選択されたセル
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectedRest = restList[indexPath.row]
@@ -91,12 +108,12 @@ class FirstViewController: UIViewController,UICollectionViewDelegate,UICollectio
         if segue.identifier == "showEatDetail" {
             let dv = (segue.destination as? DetailViewController)!
             dv.scSelectedRest = selectedRest
-//        }else if segue.identifier == "moreRest" {
-//                let dv = (segue.destination as? RestView)!
-//                dv.scSelectedGenre = selectedGenre
+        }else if segue.identifier == "moreRest" {
+                let dv = (segue.destination as? RestView)!
+                dv.scSelectedGenre = selectedGenre
        }
     }
-    //itembtnが押された時
+
     //オススメボタンが押された時
 //    @IBAction func tapRec(_ sender: UIButton) {
 //

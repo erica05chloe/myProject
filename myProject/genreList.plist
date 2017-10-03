@@ -2,67 +2,647 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>izakaya</key>
-	<array>
-		<string>居酒屋　草</string>
-		<string>居酒屋　神蔵</string>
-		<string>焼肉居酒屋えん</string>
-		<string>居酒屋だりやみ処一気</string>
-		<string>炭火串焼処奄美太鼓</string>
-		<string>居酒屋　なな彩</string>
-	</array>
-	<key>cafe</key>
-	<array>
-		<string>おうちcafe</string>
-		<string>てるまに珈琲</string>
-		<string>Typhoon</string>
-	</array>
-	<key>shima</key>
-	<array>
-		<string>味処　ささがわ</string>
-		<string>えび料理　西郷食堂</string>
-		<string>味処ふるさと</string>
-		<string>台所Haisai</string>
-		<string>笑 ほお〜らしゃ</string>
-		<string>旬香</string>
-		<string>松竹</string>
-		<string>アバシ庵</string>
-		<string>海邦丸</string>
-		<string>島唄　道楽</string>
-		<string>左馬</string>
-	</array>
-	<key>bar</key>
-	<array>
-		<string>darts&amp;billiards FREE TRUNK</string>
-		<string>SALON BAR L&apos;espoir</string>
-		<string>Mixbar Level1</string>
-	</array>
-	<key>chinese</key>
-	<array>
-		<string>中華料理来来</string>
-	</array>
-	<key>japanese</key>
-	<array>
-		<string>味処　海幸</string>
-		<string>寿司割烹きよい</string>
-		<string>六覺燈 勝男</string>
-		<string>カレーハウスAkuru</string>
-		<string>ピュアゴールド宮花庭</string>
-		<string>和創作料理　膳</string>
-		<string>潮騒</string>
-		<string>笠石ファミリーランド</string>
-		<string>創作料理とうぐら</string>
-	</array>
-	<key>western</key>
-	<array>
-		<string>レストランせりよさ</string>
-		<string>喫茶リーフ</string>
-		<string>Familiar</string>
-		<string>cafe Buera</string>
-		<string>ティザーヌ</string>
-		<string>DiningBar Party</string>
-		<string>大山スカイクラブ</string>
-		<string>gusto</string>
-	</array>
+	<key>居酒屋</key>
+	<dict>
+		<key>居酒屋　なな彩</key>
+		<dict>
+			<key>inform</key>
+			<string>0997-84-3260
+18:00～24:00
+定休日：火曜日</string>
+			<key>description</key>
+			<string>関西の和食料理屋で修行を積んだ店主が作るこだわりの料理を提供しています。また、各地から取り寄せた日本酒も豊富に取り揃えています。メインメニューの串カツは、二度漬け禁止！！</string>
+			<key>image</key>
+			<string>nana.jpg</string>
+			<key>latitude</key>
+			<string>27.397142</string>
+			<key>longitude</key>
+			<string>128.660555</string>
+		</dict>
+		<key>炭火串焼処奄美太鼓</key>
+		<dict>
+			<key>inform</key>
+			<string>0997-92-2055
+17:30～25:00
+定休日：なし</string>
+			<key>description</key>
+			<string>お客様がご来店の際には奄美太鼓の音色でお出迎えいたします！炭火でじっくり丁寧に焼いたおいしい焼き鳥を用意してお客様をお待ちしております。</string>
+			<key>image</key>
+			<string>taiko.jpg</string>
+			<key>latitude</key>
+			<string>27.397142</string>
+			<key>longitude</key>
+			<string>128.660555</string>
+		</dict>
+		<key>居酒屋だりやみ処一気</key>
+		<dict>
+			<key>inform</key>
+			<string>0997-93-2291
+17:00～23:30
+定休日：日曜日</string>
+			<key>description</key>
+			<string>大きな看板と赤ちょうちんが目印です！店内は地元のお客さんや観光客の方で賑わい、焼き鳥やボリュームあるメニューが人気です♪</string>
+			<key>image</key>
+			<string>ikki.jpg</string>
+			<key>latitude</key>
+			<string>27.333489</string>
+			<key>longitude</key>
+			<string>128.572941</string>
+		</dict>
+		<key>焼肉居酒屋えん</key>
+		<dict>
+			<key>inform</key>
+			<string>0997-92-2115
+11:00～26:00
+定休日：火曜日</string>
+			<key>description</key>
+			<string>焼肉と銘打ってはいるものの、女性向けメニューも豊富。また、隠れファンが多いのが麺類！油そばと辛味つけ麺（各￥800）はシメに注文する中毒常連客多数です。</string>
+			<key>image</key>
+			<string>en.jpg</string>
+			<key>latitude</key>
+			<string>27.397142</string>
+			<key>longitude</key>
+			<string>128.660555</string>
+		</dict>
+		<key>居酒屋　神蔵</key>
+		<dict>
+			<key>inform</key>
+			<string>0997-92-1922
+18:00～24:00
+定休日：月曜日</string>
+			<key>description</key>
+			<string>オムライスやパスタ、豚足料理などグランドメニューのほか、日替わりメニューもご用意しています。スタッフ自慢の笑顔でお客様をお待ちしています！
+
+</string>
+			<key>image</key>
+			<string>kagura.jpg</string>
+			<key>latitude</key>
+			<string>27.395856</string>
+			<key>longitude</key>
+			<string>128.658719</string>
+		</dict>
+		<key>居酒屋　草</key>
+		<dict>
+			<key>inform</key>
+			<string>0997-92-1202
+17:00〜24:00
+定休日：不定休</string>
+			<key>description</key>
+			<string>カウンターに並べられた“おばんざい”と豊富なメニューで島の料理をご堪能ください。店主夫婦はケイビングガイドもしています！島のオススメ観光スポットなどの話も聞けますよ!</string>
+			<key>image</key>
+			<string>sou.jpg</string>
+			<key>latitude</key>
+			<string>27.397142</string>
+			<key>longitude</key>
+			<string>128.660555</string>
+		</dict>
+	</dict>
+	<key>カフェ</key>
+	<dict>
+		<key>ティザーヌ</key>
+		<dict>
+			<key>inform</key>
+			<string>0997-93-2277
+11:30～18:00
+定休日：木・金曜日</string>
+			<key>description</key>
+			<string>できるだけ身体に優しいものを、と減農薬の野菜や十五穀米を使用。スイーツにも白砂糖を使用せずに島のきび砂糖を使うこだわり。</string>
+			<key>image</key>
+			<string>thiza.jpg</string>
+			<key>latitude</key>
+			<string>27.359523</string>
+			<key>longitude</key>
+			<string>128.601453</string>
+		</dict>
+		<key>笠石ファミリーランド</key>
+		<dict>
+			<key>inform</key>
+			<string>0997-92-1261
+11:30～19:00
+定休日：なし</string>
+			<key>description</key>
+			<string>沖永良部の観光地『笠石海浜公園』内にある喫茶店！海水浴での定番メニューから落ち着いた雰囲気にあった飲み物を数多く取り揃えてご来店お待ちしております。</string>
+			<key>image</key>
+			<string>kasa.jpg</string>
+			<key>latitude</key>
+			<string>27.411099</string>
+			<key>longitude</key>
+			<string>128.672567</string>
+		</dict>
+		<key>潮騒</key>
+		<dict>
+			<key>inform</key>
+			<string>0997-92-2777
+10:00～14:00/18:00～24:00
+定休日：日曜日</string>
+			<key>description</key>
+			<string>海沿いにある知る人ぞ知る隠れ家的なお店。全面ガラス張りの店内は圧巻！１～３月のシーズンになると店内からクジラが見えることもあります。</string>
+			<key>image</key>
+			<string>shiosai.jpg</string>
+			<key>latitude</key>
+			<string>27.390151</string>
+			<key>longitude</key>
+			<string>128.656061</string>
+		</dict>
+		<key>カレーハウスAkuru</key>
+		<dict>
+			<key>inform</key>
+			<string>0997-92-0045
+11:00～15:00/18:00～24:00
+定休日：日曜日</string>
+			<key>description</key>
+			<string>沖永良部島唯一のカレー専門店。夜は鉄板焼き居酒屋に様変わり。インドカレーからお子様カレー、タコライスまで幅広いカレーメニューがそろっています。</string>
+			<key>image</key>
+			<string>akuru.jpg</string>
+			<key>latitude</key>
+			<string>27.389126</string>
+			<key>longitude</key>
+			<string>128.654611</string>
+		</dict>
+		<key>Typhoon</key>
+		<dict>
+			<key>inform</key>
+			<string>0997-93-3363
+15:00〜18:30
+定休日：木曜日・日曜日</string>
+			<key>description</key>
+			<string>もともと実家のブティックだった場所を夫婦で改装し、夢のひとつ”カフェ”を始めました。あたたかい想いのこもった沖永良部島の小さなカフェから､お土産に人気の”沖永良部島型ちんすこう”も皆様にお届けします。</string>
+			<key>image</key>
+			<string>typhoon.jpg</string>
+			<key>latitude</key>
+			<string>27.333348</string>
+			<key>longitude</key>
+			<string>128.577508</string>
+		</dict>
+		<key>てるまに珈琲</key>
+		<dict>
+			<key>inform</key>
+			<string>080-8388-8080
+7:30～18:00（土・日・祝～17:00）
+定休日：木曜日</string>
+			<key>description</key>
+			<string>沖永良部では珍しいテイクアウトメインのカフェ。島ならではの素材を使ったメニューも豊富で、「えらぶ産島レモンティー」島バナナを使った「特製バナナジュース」などもあります。</string>
+			<key>image</key>
+			<string>terumani.jpg</string>
+			<key>latitude</key>
+			<string>27.392251</string>
+			<key>longitude</key>
+			<string>128.656017</string>
+		</dict>
+		<key>おうちcafe</key>
+		<dict>
+			<key>inform</key>
+			<string>0997-93-4606
+11:00〜16:00/19:00〜24:00
+定休日：水曜日・日曜日</string>
+			<key>description</key>
+			<string>センスのよいレトロアメリカンなインテリアに囲まれて、のんびり寛げるお店。定番のサラダ、パスタ、カレーから人気のBBQステーキや沖永良部島の形をしたe-Loveピザなど、オリジナルでアメリカンテイストのメニューが人気！</string>
+			<key>image</key>
+			<string>ouchi.jpg</string>
+			<key>latitude</key>
+			<string>27.333612</string>
+			<key>longitude</key>
+			<string>128.576977</string>
+		</dict>
+	</dict>
+	<key>島料理</key>
+	<dict>
+		<key>左馬</key>
+		<dict>
+			<key>inform</key>
+			<string>0997-84-3119
+18:00～24:00
+定休日：木曜日</string>
+			<key>description</key>
+			<string>お一人様でも気軽にご利用いただける、アットホームなお店です。島料理を中心に家庭料理を提供しています。</string>
+			<key>image</key>
+			<string>sama.jpg</string>
+			<key>latitude</key>
+			<string>27.333467</string>
+			<key>longitude</key>
+			<string>128.578941</string>
+		</dict>
+		<key>島唄　道楽</key>
+		<dict>
+			<key>inform</key>
+			<string>090-7290-9452
+19:00～22:00
+金曜日・土曜日以外は予約のみの営業</string>
+			<key>description</key>
+			<string>飲物＋島料理２品で1,000円！営業は金曜と土曜日の夜のみですが、ご予約をいただけましたら営業いたします。当日予約は18時まで受け付けておりますのでどうぞお気軽にお問合せください。</string>
+			<key>image</key>
+			<string>dou.jpg</string>
+			<key>latitude</key>
+			<string>27.392112</string>
+			<key>longitude</key>
+			<string>128.656642</string>
+		</dict>
+		<key>海邦丸</key>
+		<dict>
+			<key>inform</key>
+			<string>090-4994-5859
+18:00～23:00（昼は要予約）
+不定休（主に月曜日）</string>
+			<key>description</key>
+			<string>沖永良部島産の食材にこだわった海鮮居酒屋。店主自らが素潜りで獲ることもある伊勢海老や夜光貝は、鮮度の高さが自慢です！地元利用客も多い店内は、人情味を感じる気さくな雰囲気。</string>
+			<key>image</key>
+			<string>kaihou.jpg</string>
+			<key>latitude</key>
+			<string>27.333578</string>
+			<key>longitude</key>
+			<string>128.577658</string>
+		</dict>
+		<key>アバシ庵</key>
+		<dict>
+			<key>inform</key>
+			<string>090-4986-5430
+18:00～24:00
+定休日：不定休</string>
+			<key>description</key>
+			<string>地元の人が毎日通う、親しみやすい居酒屋さん。「アバシ」は、方言でハリセンボンのこと。アバシの唐揚げやむじ炒めなどの島料理をご主人が腕を振るいます。黒糖焼酎も各種取り揃っています！</string>
+			<key>image</key>
+			<string>abashi.jpg</string>
+			<key>latitude</key>
+			<string>27.392112</string>
+			<key>longitude</key>
+			<string>128.656642</string>
+		</dict>
+		<key>松竹</key>
+		<dict>
+			<key>inform</key>
+			<string>0997-92-1932
+11:30～14:00/18:00〜22:00
+定休日：日曜日・火曜(夜)</string>
+			<key>description</key>
+			<string>島の家庭料理が食べられるお店。定食メニューをはじめ、丼もの、鶏飯やソーキそばも！アバシ汁や山羊汁といった郷土料理も多く、ほっとするお店です。</string>
+			<key>image</key>
+			<string>shou.jpg</string>
+			<key>latitude</key>
+			<string>27.381538</string>
+			<key>longitude</key>
+			<string>128.616882</string>
+		</dict>
+		<key>旬香</key>
+		<dict>
+			<key>inform</key>
+			<string>0997-93-2399
+17:00〜23:00
+定休日：日曜日</string>
+			<key>description</key>
+			<string>優しくて、話し上手、聞き上手なママのいるお店！島料理のおまかせでコースがあります！チラガーやアロエの刺身、軟骨や島野菜の天ぷらなど、少しディープな島料理を召し上がりませんか？</string>
+			<key>image</key>
+			<string>shunkou.jpg</string>
+			<key>latitude</key>
+			<string>27.333178</string>
+			<key>longitude</key>
+			<string>128.577866</string>
+		</dict>
+		<key>笑 ほお〜らしゃ</key>
+		<dict>
+			<key>inform</key>
+			<string>080-3959-4973
+17:00～23:00
+定休日：火曜日</string>
+			<key>description</key>
+			<string>昼間は仕出し屋「うたみがわ」を営業されている姉妹で2016年5月にオープン。フレンドリーでお酒が大好きなママさんがお待ちしています!</string>
+			<key>image</key>
+			<string>hoo.jpg</string>
+			<key>latitude</key>
+			<string>27.333276</string>
+			<key>longitude</key>
+			<string>128.577258</string>
+		</dict>
+		<key>台所Haisai</key>
+		<dict>
+			<key>inform</key>
+			<string>0997-93-0122
+17:00～22:00
+定休日：日曜日</string>
+			<key>description</key>
+			<string>フローラル館1階にあります。地元の家族連れが多く、島ならではの新鮮な食材を豊富に使った郷土料理
+チャンプルー･きくらげやらっきょの天ぷらなどが堪能できます！</string>
+			<key>image</key>
+			<string>haisai.jpg</string>
+			<key>latitude</key>
+			<string>27.331726</string>
+			<key>longitude</key>
+			<string>128.572267</string>
+		</dict>
+		<key>味処ふるさと</key>
+		<dict>
+			<key>inform</key>
+			<string>0997-92-0800
+11:30～14:00 /18:00～23:00
+定休日：水曜日</string>
+			<key>description</key>
+			<string>沖永良部島の中心にあり静かで落ち着いた雰囲気でお食事ができる処です。隠れ家的な和食専門店であり、島料理をはじめ創作料理も楽しめます。</string>
+			<key>image</key>
+			<string>furusato.jpg</string>
+			<key>latitude</key>
+			<string>27.366173</string>
+			<key>longitude</key>
+			<string>128.626203</string>
+		</dict>
+		<key>えび料理　西郷食堂</key>
+		<dict>
+			<key>inform</key>
+			<string>0997-92-1103
+11:30～14:00 / 18:00～22:00
+定休日：日曜日</string>
+			<key>description</key>
+			<string>店主が海に潜り、獲ってきた伊勢海老や夜光貝など新鮮な海の幸を提供する島の海鮮料理屋です！</string>
+			<key>image</key>
+			<string>saigou.jpg</string>
+			<key>latitude</key>
+			<string>27.414447</string>
+			<key>longitude</key>
+			<string>128.642412</string>
+		</dict>
+		<key>味処　ささがわ</key>
+		<dict>
+			<key>inform</key>
+			<string>0997-92-2320
+18:30～25:00
+定休日：不定休</string>
+			<key>description</key>
+			<string>事前にご予約いただければ、島料理ご用意できます。アットホームな雰囲気で島の常連客も観光客の方もいっしょにふれあえるお店です。</string>
+			<key>image</key>
+			<string>sasagawa.jpg</string>
+			<key>latitude</key>
+			<string>27.39382</string>
+			<key>longitude</key>
+			<string>128.655964</string>
+		</dict>
+	</dict>
+	<key>バー</key>
+	<dict>
+		<key>大山スカイクラブ</key>
+		<dict>
+			<key>inform</key>
+			<string>090-4981-8513
+19:00～23:00
+定休日：不定休</string>
+			<key>description</key>
+			<string>アーミーファン垂涎の、航空自衛隊沖永良部分屯基地内にあるお店。隊員の方用のお店ですが、一般人も利用できます。お昼は定食屋さん、夜はバーとしてお越しください。</string>
+			<key>image</key>
+			<string>sky.jpg</string>
+			<key>latitude</key>
+			<string>27.366667</string>
+			<key>longitude</key>
+			<string>128.566667</string>
+		</dict>
+		<key>SALON BAR L&apos;espoir</key>
+		<dict>
+			<key>inform</key>
+			<string>080-5245-6135
+20:00～
+定休日：日曜日</string>
+			<key>description</key>
+			<string>約８００種類の世界の銘酒に囲まれた空間でゆっくりとした癒しの時間をお過ごしください。ベジタブル＆フルーツアドバイザーの資格をもったオーナーが作るフレッシュフルーツや野菜を使ったカクテルが人気です！</string>
+			<key>image</key>
+			<string>les.jpg</string>
+			<key>latitude</key>
+			<string>27.392112</string>
+			<key>longitude</key>
+			<string>128.656642</string>
+		</dict>
+		<key>darts&amp;billiards FREE TRUNK</key>
+		<dict>
+			<key>inform</key>
+			<string>997-92-4178
+19:00〜24:00
+定休日：不定休</string>
+			<key>description</key>
+			<string>えらぶでダーツをするならここ！テキーラの種類も豊富で盛り上がること間違いなし。もちろんテーブルでゆっくり過ごすのもok♪オーダーで作ってくれるケーキが美味しいのもここです！</string>
+			<key>image</key>
+			<string>free.jpg</string>
+			<key>latitude</key>
+			<string>27.397142</string>
+			<key>longitude</key>
+			<string>128.660555</string>
+		</dict>
+		<key>Mixbar Level1</key>
+		<dict>
+			<key>inform</key>
+			<string>090-1929-6019
+19:00〜27:00
+定休日：月曜日</string>
+			<key>description</key>
+			<string>とにかくオーナーが愉快なレゲエバー！一人でも時間を忘れて長居しちゃうカウンター席がオススメ！お酒はもちろん、料理もがっつりからおつまみまで豊富です。</string>
+			<key>image</key>
+			<string>level.jpg</string>
+			<key>latitude</key>
+			<string>27.395856</string>
+			<key>longitude</key>
+			<string>128.658719</string>
+		</dict>
+	</dict>
+	<key>中華料理</key>
+	<dict>
+		<key>中華料理来来</key>
+		<dict>
+			<key>inform</key>
+			<string>0997-92-2377
+11:30～14:00/17:30~22:00
+定休日：月曜日</string>
+			<key>description</key>
+			<string>島の名産品黒糖焼酎と本格中華料理をご用意してお客様の来店お待ちしております。全品お持ち帰りできます。人数に合わせてご利用下さい。</string>
+			<key>image</key>
+			<string>rai.jpg</string>
+			<key>latitude</key>
+			<string>27.393401</string>
+			<key>longitude</key>
+			<string>128.656308</string>
+		</dict>
+	</dict>
+	<key>和食</key>
+	<dict>
+		<key>ピュアゴールド宮花庭</key>
+		<dict>
+			<key>inform</key>
+			<string>0997-81-5858
+11:00～27:00
+定休日：なし</string>
+			<key>description</key>
+			<string>知名の中心街にある、ランチから深夜まで営業している数少ない店。
+メニューは刺身盛り合わせや海鮮丼など海の幸のほか、季節の島料理、パフェなどとにかく豊富！</string>
+			<key>image</key>
+			<string>pure.jpg</string>
+			<key>latitude</key>
+			<string>27.333276</string>
+			<key>longitude</key>
+			<string>128.577258</string>
+		</dict>
+		<key>味処　海幸</key>
+		<dict>
+			<key>inform</key>
+			<string>0997-92-3826
+11:30～14:00/18:00～22:00
+定休日：日曜日</string>
+			<key>description</key>
+			<string>島の近海で獲れた魚貝類がメインのお店です。魚料理を始め、貝料理の説明や海の知識豊富な店主が、質問・疑問あればお答えいたします。魚の方言名を覚えるチャンスかも！
+お酒の肴にぜひ店主との会話もお楽しみください。</string>
+			<key>image</key>
+			<string>kaikou.jpg</string>
+			<key>latitude</key>
+			<string>27.394076</string>
+			<key>longitude</key>
+			<string>128.656011</string>
+		</dict>
+		<key>創作料理とうぐら</key>
+		<dict>
+			<key>inform</key>
+			<string>0997-92-1345
+11:30～14:00/18:00～22:00
+定休日：火曜日
+</string>
+			<key>description</key>
+			<string>店主自ら毎朝あがる島の鮮魚を仕入れ、とれたて新鮮な島野菜を使った体にも心にもやさしい和風創作料理をご提供させていただいております。</string>
+			<key>image</key>
+			<string>tougura.jpg</string>
+			<key>latitude</key>
+			<string>27.391729</string>
+			<key>longitude</key>
+			<string>128.656464</string>
+		</dict>
+		<key>和創料理　膳</key>
+		<dict>
+			<key>inform</key>
+			<string>0997-92-2319
+11:30～14:00/18:00～23:00
+定休日：水曜日</string>
+			<key>description</key>
+			<string>地元漁協で獲れた新鮮な魚を使用し、野菜直売所で販売している無農薬野菜を使用した安心安全な体に優しい料理を心がけております。島の黒糖焼酎を飲みながら楽しいひと時をお過ごしください。</string>
+			<key>image</key>
+			<string>zen.jpg</string>
+			<key>latitude</key>
+			<string>27.397484</string>
+			<key>longitude</key>
+			<string>128.660438</string>
+		</dict>
+		<key>六覺燈 勝男</key>
+		<dict>
+			<key>inform</key>
+			<string>0997-92-1123
+18:00～
+定休日：日曜日</string>
+			<key>description</key>
+			<string>島内で獲れた魚介類、野菜を使った創作の串カツです。生野菜とと自家製の4種類の付けダレもあります。ワイン・日本酒・焼酎も豊富！</string>
+			<key>image</key>
+			<string>katuo.jpg</string>
+			<key>latitude</key>
+			<string>27.396614</string>
+			<key>longitude</key>
+			<string>128.659969</string>
+		</dict>
+		<key>寿司割烹きよい</key>
+		<dict>
+			<key>inform</key>
+			<string>0997-92-2327
+11:30〜13:30/18:00〜22:00
+定休日：日曜日</string>
+			<key>description</key>
+			<string>島魚のアラ煮や島魚の焼き物・刺身などなど海の幸を地元の黒糖焼酎と一緒にご堪能できる料理をご用意させていただきます。お持ち帰りもできますので合わせてご利用ください。</string>
+			<key>image</key>
+			<string>kiyoi.jpg</string>
+			<key>latitude</key>
+			<string>27.395617</string>
+			<key>longitude</key>
+			<string>128.657333</string>
+		</dict>
+	</dict>
+	<key>洋食</key>
+	<dict>
+		<key>gusto</key>
+		<dict>
+			<key>inform</key>
+			<string>0997-92-0487
+11:30～14:00/18:00～22:00
+定休日：木曜日</string>
+			<key>description</key>
+			<string>おきのえらぶ島の本格イタリアンレストラン！本格ピザやパスタ、ワインがお手軽に楽しめます。島内のお客様も多い地元に愛されているレストランです。</string>
+			<key>image</key>
+			<string>gusto.jpg</string>
+			<key>latitude</key>
+			<string>27.392734</string>
+			<key>longitude</key>
+			<string>128.6559</string>
+		</dict>
+		<key>DiningBar Party</key>
+		<dict>
+			<key>inform</key>
+			<string>0997-93-3741
+18:00～23:00
+定休日：なし</string>
+			<key>description</key>
+			<string>暑い日には屋外のウッドデッキでビアガーデン！メニューは定番居酒屋料理から豚足や豚軟骨、島魚の煮つけなど島料理など豊富。おろしポン酢で食べる豚の唐揚げが人気メニュー！</string>
+			<key>image</key>
+			<string>party.jpg</string>
+			<key>latitude</key>
+			<string>27.333276</string>
+			<key>longitude</key>
+			<string>128.577258</string>
+		</dict>
+		<key>cafe Buera</key>
+		<dict>
+			<key>inform</key>
+			<string>080-2794-0808
+11:00～14:00/18:30～
+不定休</string>
+			<key>description</key>
+			<string>えらぶ牛は数量限定！特別な日には特別なお肉を食べましょう♪海の見えるcafeで島のイケメン揃えてお待ちしてます！</string>
+			<key>image</key>
+			<string>buera.jpg</string>
+			<key>latitude</key>
+			<string>27.333276</string>
+			<key>longitude</key>
+			<string>128.577258</string>
+		</dict>
+		<key>Familiar</key>
+		<dict>
+			<key>inform</key>
+			<string>0997-93-3998
+11:30～14:00/14:30～16:30/17:00～24:00
+定休日：火曜日</string>
+			<key>description</key>
+			<string>島食材もとり入れたカジュアル洋食居酒屋！お肉系、前菜系、パスタ、パエリア、デザートなどなど豊富なメニュー展開が自慢です。</string>
+			<key>image</key>
+			<string>fam.jpg</string>
+			<key>latitude</key>
+			<string>27.332978</string>
+			<key>longitude</key>
+			<string>128.575188</string>
+		</dict>
+		<key>喫茶リーフ</key>
+		<dict>
+			<key>inform</key>
+			<string>0997-93-0015
+11:00～21:00
+定休日：水曜日午後</string>
+			<key>description</key>
+			<string>島の南側の中央に位置する太平洋を望む喫茶店。ワンプレートランチが人気でボリュームのあるメニューが特徴です。</string>
+			<key>image</key>
+			<string>ri-hu.jpg</string>
+			<key>latitude</key>
+			<string>27.361657</string>
+			<key>longitude</key>
+			<string>128.622526</string>
+		</dict>
+		<key>レストランせりよさ</key>
+		<dict>
+			<key>inform</key>
+			<string>0997-93-3554
+11:30～14:00/17:30～22:00
+定休日：水曜日（夜は営業）</string>
+			<key>description</key>
+			<string>おきえらぶフローラルホテルの別館２階にあるレストラン。ランチタイムに是非食べたいのは「せりよさ特製トマトソースのオムライス」！</string>
+			<key>image</key>
+			<string>seriyosa.jpg</string>
+			<key>latitude</key>
+			<string>27.331726</string>
+			<key>longitude</key>
+			<string>128.572267</string>
+		</dict>
+	</dict>
 </dict>
 </plist>

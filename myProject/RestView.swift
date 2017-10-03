@@ -19,43 +19,61 @@ class RestView: UIViewController,UICollectionViewDelegate,UICollectionViewDataSo
     
     @IBOutlet weak var RestCollection: UICollectionView!
 
-    var moreRest:[String] = []
-    var moreRestImage = [""]
+    var genreRest:[String] = []
+    var genreRestImage = [""]
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
     
     //セルの取得
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return moreRest.count
+        return genreRest.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell:UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
         
-        let label = cell.contentView.viewWithTag(1) as! UILabel
-        label.text = moreRest[indexPath.row]
-        
-        let imageView = cell.contentView.viewWithTag(2) as! UIImageView
-        imageView.image = UIImage(named: moreRestImage[indexPath.row])
-        
-        return cell
-    }
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
         //ファイルパスを取得
         let filePath = Bundle.main.path(forResource: "genreList", ofType: "plist")
-        
-        //型に格納
+        //ファイルの内容を読み込んでディクショナリー型に格納
         let dic = NSDictionary(contentsOfFile:filePath!)
+        print(dic?[scSelectedGenre] as Any)
         
-        for(key,data) in dic! {
-            print(key)
-            moreRest.append(key as! String)
+        for(key,data) in dic!{
+            let dicForData:NSDictionary = data as! NSDictionary
+            if((key as! NSString) as String == scSelectedGenre){
+                
+        let label = cell.contentView.viewWithTag(1) as! UILabel
+        label.text = genreRest[indexPath.row]
+        
+        let imageView = cell.contentView.viewWithTag(2) as! UIImageView
+       imageView.image = UIImage(named: genreRestImage[indexPath.row])
+        
+            }
+            
         }
-        moreRest.sort(by: {$0 < $1})
-        print(moreRest)
+        return cell
     }
+
+
+    
+        //ファイルパスを取得
+//        let filePath = Bundle.main.path(forResource: "genreList", ofType: "plist")
+//        //ファイルの内容を読み込んでディクショナリー型に格納
+//        let dic = NSDictionary(contentsOfFile:filePath!)
+//        print(dic?[scSelectedGenre] as Any)
+//
+//        for(key,data) in dic!{
+//            let dicForData:NSDictionary = data as! NSDictionary
+//            if((key as! NSString) as String == scSelectedGenre){
+
+//                let label.text = dicForData["key"] as! String
+//              let imageView;.image = UIImage(named:dicForData["image"] as! String)
+
+//            }
+//    }
+//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
