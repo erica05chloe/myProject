@@ -22,18 +22,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Pvy-fi-JY8">
-                                <rect key="frame" x="0.0" y="140" width="375" height="482"/>
+                                <rect key="frame" x="0.0" y="167" width="375" height="455"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jUT-SF-9pG">
                                     <size key="itemSize" width="174" height="205"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="1Hm-2u-Osk">
-                                        <rect key="frame" x="0.0" y="0.0" width="174" height="205"/>
+                                        <rect key="frame" x="0.0" y="50" width="174" height="205"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="174" height="205"/>
@@ -54,16 +54,33 @@
                                         </view>
                                     </collectionViewCell>
                                 </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="TeR-3F-Kb6" customClass="TestCollectionReusableView" customModule="myProject" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yth-Ba-v2a">
+                                            <rect key="frame" x="0.0" y="8" width="367" height="34"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <connections>
+                                        <outlet property="testLabel" destination="yth-Ba-v2a" id="WNQ-1K-m00"/>
+                                        <outlet property="testLabl" destination="yth-Ba-v2a" id="h9D-u1-ble"/>
+                                    </connections>
+                                </collectionReusableView>
                                 <connections>
                                     <outlet property="dataSource" destination="9pv-A4-QxB" id="aHC-dH-rKL"/>
                                     <outlet property="delegate" destination="9pv-A4-QxB" id="Cyl-ky-1fu"/>
                                 </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qty-po-ySF">
-                                <rect key="frame" x="262" y="36" width="87" height="30"/>
+                                <rect key="frame" x="272" y="18" width="87" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="おすすめ"/>
+                                <state key="normal" title="おまかせ"/>
                                 <connections>
                                     <action selector="tapRec:" destination="9pv-A4-QxB" eventType="touchUpInside" id="dRX-Jb-e0y"/>
                                     <segue destination="Ll8-sT-wk8" kind="presentation" identifier="modal" modalPresentationStyle="overCurrentContext" id="KYV-MK-VoX"/>
@@ -214,7 +231,7 @@
                                 <rect key="frame" x="0.0" y="91" width="204" height="204"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vlV-QX-46U">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vlV-QX-46U">
                                 <rect key="frame" x="204" y="164" width="171" height="142"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -234,7 +251,7 @@
                                     <action selector="tapBack:" destination="d7T-q7-uSe" eventType="touchUpInside" id="sat-1b-IcB"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Vei-1Q-8xQ">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Vei-1Q-8xQ">
                                 <rect key="frame" x="204" y="83" width="165" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -245,9 +262,8 @@
                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tlK-vo-4zN">
                                 <rect key="frame" x="311" y="5" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="fav1.png"/>
+                                <state key="normal" image="fav1.png" backgroundImage="fav1.png"/>
                                 <connections>
-                                    <action selector="addFav:" destination="d7T-q7-uSe" eventType="touchUpInside" id="IlI-UH-ohA"/>
                                     <action selector="tapStar:" destination="d7T-q7-uSe" eventType="touchUpInside" id="Pvm-c3-Dyz"/>
                                 </connections>
                             </button>
@@ -256,7 +272,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="ck0-ir-usp"/>
                     <connections>
-                        <outlet property="addFav" destination="tlK-vo-4zN" id="ugt-Ny-JDa"/>
                         <outlet property="myDesc" destination="vlV-QX-46U" id="QPs-UZ-xbZ"/>
                         <outlet property="myImage" destination="7dS-Ml-0vs" id="CGt-aJ-NLa"/>
                         <outlet property="myInform" destination="Vei-1Q-8xQ" id="Wa6-9s-cqV"/>
@@ -297,10 +312,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="170" height="204"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="66t-pC-KFQ">
-                                                    <rect key="frame" x="30" y="0.0" width="140" height="130"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IeR-mq-FS5">
                                                     <rect key="frame" x="15" y="130" width="160" height="75"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -308,6 +319,10 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="66t-pC-KFQ">
+                                                    <rect key="frame" x="15" y="0.0" width="140" height="130"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
                                             </subviews>
                                         </view>
                                     </collectionViewCell>
@@ -317,24 +332,23 @@
                                     <outlet property="delegate" destination="8rJ-Kc-sve" id="ahA-Ng-Z4g"/>
                                 </connections>
                             </collectionView>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A2T-5o-KXX">
-                                <rect key="frame" x="0.0" y="10" width="375" height="251"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="QL7-Ej-jUB">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="247"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </webView>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="ACT" image="second" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="actCollection" destination="nVG-fB-osC" id="wTb-hs-LSr"/>
-                        <outlet property="webView" destination="A2T-5o-KXX" id="XSH-mU-0zV"/>
+                        <outlet property="myMap" destination="QL7-Ej-jUB" id="WtP-mF-7jF"/>
                         <segue destination="d7T-q7-uSe" kind="presentation" identifier="showActDetail" id="aZP-du-Lyn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749.60000000000002" y="359.37031484257875"/>
+            <point key="canvasLocation" x="749.60000000000002" y="406.14692653673166"/>
         </scene>
         <!--LOVE-->
         <scene sceneID="V3z-xj-yIX">
@@ -406,6 +420,6 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="9YB-pj-7Yi"/>
+        <segue reference="cRQ-IF-4IA"/>
     </inferredMetricsTieBreakers>
 </document>

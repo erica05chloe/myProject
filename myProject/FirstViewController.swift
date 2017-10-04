@@ -21,7 +21,7 @@ class FirstViewController: UIViewController,UICollectionViewDelegate,UICollectio
     var selectedImage: UIImage?
     var selectedRest = ""
     var selectedGenre = ""
-//    var sectionIndex:[String] = ["洋食","和食","中華","島料理","カフェ","居酒屋","バー"]
+    var sectionIndex:[String] = ["洋食","和食","中華","島料理","カフェ","居酒屋","バー"]
 
     //セルの取得
      func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
@@ -39,22 +39,37 @@ class FirstViewController: UIViewController,UICollectionViewDelegate,UICollectio
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-        return restList.count
+//
+//       せくしょん？？
+        switch (section){
+        case 0:
+            return 6
+        case 1:
+            return 7
+        case 2:
+            return 11
+        case 3:
+            return 4
+        case 4:
+            return 1
+        case 5:
+            return 6
+        case 6:
+            return 6
+        default:
+            return 0
+        }
+//         return restList.count
     }
     
-//    func numberOfSections(in collectionView: UICollectionView) -> Int {
-//        return sectionIndex.count
-//    }
-//    
-//    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView
-//    {
-//        let testSection = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "TestSection", for: indexPath as IndexPath) as! TestCollectionReusableView
-//        
-//        testSection.testLabel.text = sectionIndex[indexPath.section]
-//        
-//        return testSection
-//    }
+
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView
+    {
+        let testSection = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "TestSection", for: indexPath) as! TestCollectionReusableView
+        testSection.testLabel.text = sectionIndex[indexPath.section]
+
+        return testSection
+    }
     
     
     override func viewDidLoad() {
@@ -115,7 +130,7 @@ class FirstViewController: UIViewController,UICollectionViewDelegate,UICollectio
     }
 
     //オススメボタンが押された時
-//    @IBAction func tapRec(_ sender: UIButton) {
+    @IBAction func tapRec(_ sender: UIButton) {
 //
 //    let ranRes = Int(arc4random()) % restImage.count
 //    
@@ -129,7 +144,7 @@ class FirstViewController: UIViewController,UICollectionViewDelegate,UICollectio
 //            alert.view.addSubview(imageView)
 //
 //    present(alert,animated: true, completion: nil)
-//    }
+    }
 //    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

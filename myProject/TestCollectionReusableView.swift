@@ -9,5 +9,7 @@
 import UIKit
 
 class TestCollectionReusableView: UICollectionReusableView {
-        
+    
+    @IBOutlet weak var testLabel: UILabel!
+    
 }
