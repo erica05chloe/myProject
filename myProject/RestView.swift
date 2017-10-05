@@ -17,6 +17,7 @@ class RestView: UIViewController,UICollectionViewDelegate,UICollectionViewDataSo
         self.dismiss(animated: true, completion: {})
     }
     
+
     @IBOutlet weak var RestCollection: UICollectionView!
 
     var genreRest:[String] = []

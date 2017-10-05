@@ -7,9 +7,10 @@
 //
 
 import UIKit
-import WebKit
+//import WebKit
+import MapKit
 
-class SecondViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource{
+class SecondViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,MKMapViewDelegate{
     
     @IBOutlet weak var actCollection: UICollectionView!
     var actList:[String] = []
@@ -35,15 +36,89 @@ class SecondViewController: UIViewController,UICollectionViewDelegate,UICollecti
         return actList.count
     }
    
-    @IBOutlet weak var webView: UIWebView!
+//    @IBOutlet weak var webView: UIWebView!
+    
+    @IBOutlet weak var myMap: MKMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        //webview
-        let url = URL(string: "https://www.google.com/maps/d/embed?mid=18MI9u6nJfjb9W6jlzh3__tKlUH4&hl=en_US")
-        let request = URLRequest(url: url!)
-        webView.loadRequest(request)
+//        //webview
+//        let url = URL(string: "https://www.google.com/maps/d/embed?mid=18MI9u6nJfjb9W6jlzh3__tKlUH4&hl=en_US")
+//        let request = URLRequest(url: url!)
+//        webView.loadRequest(request)
+        
+        //map
+        let coordinate = CLLocationCoordinate2DMake(27.368889, 128.566667)
+        let span = MKCoordinateSpanMake(0.1,0.1)
+        let region = MKCoordinateRegionMake(coordinate, span)
+        myMap.setRegion(region, animated:true)
+        
+        let myPin1 = MKPointAnnotation()
+        myPin1.coordinate = CLLocationCoordinate2DMake(27.43577, 128.71264)
+        myPin1.title = "シャーシ"
+        myMap.addAnnotation(myPin1)
+        
+        let myPin2 = MKPointAnnotation()
+        myPin2.coordinate = CLLocationCoordinate2DMake(27.40898, 128.63441)
+        myPin2.title = "ワンジョ"
+        myMap.addAnnotation(myPin2)
+        
+        let myPin3 = MKPointAnnotation()
+        myPin3.coordinate = CLLocationCoordinate2DMake(27.40879, 128.62817)
+        myPin3.title = "イダシチ"
+        myMap.addAnnotation(myPin3)
+        
+        let myPin4 = MKPointAnnotation()
+        myPin4.coordinate = CLLocationCoordinate2DMake(27.40613, 128.62355)
+        myPin4.title = "ウパマ"
+        myMap.addAnnotation(myPin4)
+        
+        let myPin5 = MKPointAnnotation()
+        myPin5.coordinate = CLLocationCoordinate2DMake(27.38701, 128.52295)
+        myPin5.title = "トゥマイ"
+        myMap.addAnnotation(myPin5)
+        
+        let myPin6 = MKPointAnnotation()
+        myPin6.coordinate = CLLocationCoordinate2DMake(27.37237, 128.52038)
+        myPin6.title = "シビキニャ"
+        myMap.addAnnotation(myPin6)
+        
+        let myPin7 = MKPointAnnotation()
+        myPin7.coordinate = CLLocationCoordinate2DMake(27.35612, 128.52888)
+        myPin7.title = "カネク"
+        myMap.addAnnotation(myPin7)
+        
+        let myPin8 = MKPointAnnotation()
+        myPin8.coordinate = CLLocationCoordinate2DMake(27.33376, 128.54943)
+        myPin8.title = "ヨンドメ"
+        myMap.addAnnotation(myPin8)
+        
+        let myPin9 = MKPointAnnotation()
+        myPin9.coordinate = CLLocationCoordinate2DMake(27.33943, 128.59564)
+        myPin9.title = "イニナ"
+        myMap.addAnnotation(myPin9)
+        
+        let myPin10 = MKPointAnnotation()
+        myPin10.coordinate = CLLocationCoordinate2DMake(27.36304, 128.62468)
+        myPin10.title = "与和の浜"
+        myMap.addAnnotation(myPin10)
+        
+        let myPin11 = MKPointAnnotation()
+        myPin11.coordinate = CLLocationCoordinate2DMake(27.43223, 128.70964)
+        myPin11.title = "ビシ"
+        myMap.addAnnotation(myPin11)
+        
+        let myPin12 = MKPointAnnotation()
+        myPin12.coordinate = CLLocationCoordinate2DMake(27.38091, 128.64818)
+        myPin12.title = "平瀬"
+        myMap.addAnnotation(myPin12)
+        
+        let myPin13 = MKPointAnnotation()
+        myPin13.coordinate = CLLocationCoordinate2DMake(27.39583, 128.5579)
+        myPin13.title = "沖泊"
+        myMap.addAnnotation(myPin13)
+        
         
         //ファイルパスを取得
         let filePath = Bundle.main.path(forResource: "actList", ofType: "plist")

@@ -2,21 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>darts&amp;billiards FREE TRUNK</key>
-	<dict>
-		<key>inform</key>
-		<string>997-92-4178
-19:00〜24:00
-定休日：不定休</string>
-		<key>description</key>
-		<string>えらぶでダーツをするならここ！テキーラの種類も豊富で盛り上がること間違いなし。もちろんテーブルでゆっくり過ごすのもok♪オーダーで作ってくれるケーキが美味しいのもここです！</string>
-		<key>image</key>
-		<string>free.jpg</string>
-		<key>latitude</key>
-		<string>27.397142</string>
-		<key>longitude</key>
-		<string>128.660555</string>
-	</dict>
 	<key>Mixbar Level1</key>
 	<dict>
 		<key>inform</key>
@@ -31,6 +16,21 @@
 		<string>27.395856</string>
 		<key>longitude</key>
 		<string>128.658719</string>
+	</dict>
+	<key>darts&amp;billiards FREE TRUNK</key>
+	<dict>
+		<key>inform</key>
+		<string>997-92-4178
+19:00〜24:00
+定休日：不定休</string>
+		<key>description</key>
+		<string>えらぶでダーツをするならここ！テキーラの種類も豊富で盛り上がること間違いなし。もちろんテーブルでゆっくり過ごすのもok♪オーダーで作ってくれるケーキが美味しいのもここです！</string>
+		<key>image</key>
+		<string>free.jpg</string>
+		<key>latitude</key>
+		<string>27.397142</string>
+		<key>longitude</key>
+		<string>128.660555</string>
 	</dict>
 	<key>旬香</key>
 	<dict>
@@ -403,7 +403,7 @@
 		<key>description</key>
 		<string>島の南側の中央に位置する太平洋を望む喫茶店。ワンプレートランチが人気でボリュームのあるメニューが特徴です。</string>
 		<key>image</key>
-		<string>ri-hu.jpg</string>
+		<string>rihu.jpg</string>
 		<key>latitude</key>
 		<string>27.361657</string>
 		<key>longitude</key>

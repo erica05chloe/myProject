@@ -17,6 +17,7 @@ class FirstViewController: UIViewController,UICollectionViewDelegate,UICollectio
     
     var restList:[String] = []
     var restImage = ["party","fam","level","les","typhoon","buera","free","gusto","saigou","ouchi","terumani","abashi","akuru","thiza","pure","seriyosa","rai","katuo","tougura","haisai","sasagawa","kaikou","furusato","zen","rihu","sky","kiyoi","nana","kagura","sou","ikki","dou","sama","shunkou","shou","kaihou","shiosai","taiko","en","hoo","kasa"]
+    var restImage2 = [["nana","kagura","sou","ikki","taiko","en"],["typhoon","terumani","ouchi","akura","thiza","shiosai","kasa"],["saigou","abashi","haisai","sasagawa","furusato","dou","sama","shunkou","shou","kaihou","hoo"],["level","les","free","sky"],["rai"],["pure","katuo","tougura","kaikou","zen","kiyoi"],["party","fam","buera","gusto","seriyosa","rihu"]]
     
     var selectedImage: UIImage?
     var selectedRest = ""
@@ -39,38 +40,26 @@ class FirstViewController: UIViewController,UICollectionViewDelegate,UICollectio
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//
+
+//       セル（データ）の個数
+       return restImage2[section].count
+//        return restList.count
+    }
+    
 //       せくしょん？？
-        switch (section){
-        case 0:
-            return 6
-        case 1:
-            return 7
-        case 2:
-            return 11
-        case 3:
-            return 4
-        case 4:
-            return 1
-        case 5:
-            return 6
-        case 6:
-            return 6
-        default:
-            return 0
-        }
-//         return restList.count
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return sectionIndex.count
     }
-    
 
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView
-    {
-        let testSection = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "TestSection", for: indexPath) as! TestCollectionReusableView
-        testSection.testLabel.text = sectionIndex[indexPath.section]
 
-        return testSection
-    }
-    
+//    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView
+//    {
+//        let testSection = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "TestSection", for: indexPath) as! TestCollectionReusableView
+//        testSection.testLabel.text = sectionIndex[indexPath.section]
+//
+//        return testSection
+//    }
+//
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -131,21 +120,21 @@ class FirstViewController: UIViewController,UICollectionViewDelegate,UICollectio
 
     //オススメボタンが押された時
     @IBAction func tapRec(_ sender: UIButton) {
-//
-//    let ranRes = Int(arc4random()) % restImage.count
-//    
-//    let alert = UIAlertController(title: "おすすめ", message:"", preferredStyle: .alert)
-//    
-//    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-//    
-//    //アラートにimageを表示
-//        let imageView = UIImageView(frame: CGRect(x:0, y:0, width:100, height:100))
-//        imageView.image = UIImage(named: restImage[ranRes])
-//            alert.view.addSubview(imageView)
-//
-//    present(alert,animated: true, completion: nil)
+
+    let ranRes = Int(arc4random()) % restImage.count
+    
+    let alert = UIAlertController(title: "迷ったら...", message:"", preferredStyle: .alert)
+    
+    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+    
+    //アラートにimageを表示
+        let imageView = UIImageView(frame: CGRect(x:0, y:0, width:100, height:100))
+        imageView.image = UIImage(named: restImage[ranRes])
+            alert.view.addSubview(imageView)
+
+    present(alert,animated: true, completion: nil)
     }
-//    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
        
