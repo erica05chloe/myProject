@@ -243,6 +243,16 @@
                                 <rect key="frame" x="0.0" y="314" width="375" height="304"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tlK-vo-4zN">
+                                <rect key="frame" x="293" y="5" width="87" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="熱盛" image="fav1.png" backgroundImage="fav1.png">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapStar:" destination="d7T-q7-uSe" eventType="touchUpInside" id="Pvm-c3-Dyz"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRt-Zh-seb">
                                 <rect key="frame" x="0.0" y="0.0" width="106" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -259,14 +269,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tlK-vo-4zN">
-                                <rect key="frame" x="311" y="5" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="fav1.png" backgroundImage="fav1.png"/>
-                                <connections>
-                                    <action selector="tapStar:" destination="d7T-q7-uSe" eventType="touchUpInside" id="Pvm-c3-Dyz"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -276,6 +278,7 @@
                         <outlet property="myImage" destination="7dS-Ml-0vs" id="CGt-aJ-NLa"/>
                         <outlet property="myInform" destination="Vei-1Q-8xQ" id="Wa6-9s-cqV"/>
                         <outlet property="myMap" destination="fn1-uU-7wx" id="Axm-oh-P4j"/>
+                        <outlet property="tapStar" destination="tlK-vo-4zN" id="8YW-dP-2iG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d7H-5J-k7L" userLabel="First Responder" sceneMemberID="firstResponder"/>

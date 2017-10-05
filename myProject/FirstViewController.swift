@@ -86,7 +86,7 @@ class FirstViewController: UIViewController,UICollectionViewDelegate,UICollectio
         self.view.addSubview(myUIPicker)
 
     }
-    
+
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -96,7 +96,7 @@ class FirstViewController: UIViewController,UICollectionViewDelegate,UICollectio
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return genre[row] as? String
     }
-    //pickerviewで選択された時
+//    //pickerviewで選択された時
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         selectedGenre = genre[row]
         performSegue(withIdentifier: "moreRest", sender: nil)
@@ -118,21 +118,21 @@ class FirstViewController: UIViewController,UICollectionViewDelegate,UICollectio
        }
     }
 
-    //オススメボタンが押された時
+    //modalviewにとぶ
     @IBAction func tapRec(_ sender: UIButton) {
 
-    let ranRes = Int(arc4random()) % restImage.count
-    
-    let alert = UIAlertController(title: "迷ったら...", message:"", preferredStyle: .alert)
-    
-    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-    
-    //アラートにimageを表示
-        let imageView = UIImageView(frame: CGRect(x:0, y:0, width:100, height:100))
-        imageView.image = UIImage(named: restImage[ranRes])
-            alert.view.addSubview(imageView)
-
-    present(alert,animated: true, completion: nil)
+//    let ranRes = Int(arc4random()) % restImage.count
+//
+//    let alert = UIAlertController(title: "迷ったら...", message:"", preferredStyle: .alert)
+//
+//    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+//
+//    //アラートにimageを表示
+//        let imageView = UIImageView(frame: CGRect(x:0, y:0, width:100, height:100))
+//        imageView.image = UIImage(named: restImage[ranRes])
+//            alert.view.addSubview(imageView)
+//
+//    present(alert,animated: true, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {
@@ -140,3 +140,4 @@ class FirstViewController: UIViewController,UICollectionViewDelegate,UICollectio
        
     }
 }
+

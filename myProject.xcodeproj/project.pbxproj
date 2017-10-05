@@ -39,7 +39,6 @@
 		146A44791F6E5E3E003A21C4 /* restaurantList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = restaurantList.plist; sourceTree = "<group>"; };
 		14A21FF31F7BFE1C0070DDB2 /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 		14E841051F77DE2700165988 /* RestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestView.swift; sourceTree = "<group>"; };
-		14E841841F7B14AE00165988 /* fav1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fav1.png; sourceTree = "<group>"; };
 		14E841851F7B14B800165988 /* fav2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fav2.png; sourceTree = "<group>"; };
 		14F5448E1F709B4700984A71 /* actList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = actList.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,7 +88,6 @@
 				146A44791F6E5E3E003A21C4 /* restaurantList.plist */,
 				14F5448E1F709B4700984A71 /* actList.plist */,
 				144EE1571F77983B00CEE708 /* genreList.plist */,
-				14E841841F7B14AE00165988 /* fav1.png */,
 				14E841851F7B14B800165988 /* fav2.png */,
 			);
 			path = myProject;

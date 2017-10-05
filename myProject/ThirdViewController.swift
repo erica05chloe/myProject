@@ -36,7 +36,19 @@ class ThirdViewController: UIViewController,UITableViewDelegate,UITableViewDataS
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
             cell.textLabel?.text = "favArr[indexPath.row]"
+            
             return cell
+        }
+    
+    // すわいぷで消去
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let deleteButton: UITableViewRowAction = UITableViewRowAction(style: .normal, title: "delete"){(action, index) -> Void in self.favArr.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .fade)
+            self.myDefault.removeObject(forKey: "favArr")
+            self.myDefault.synchronize()
+            self.myTableView.reloadData()
+    }
+    return [deleteButton]
     }
         
        
