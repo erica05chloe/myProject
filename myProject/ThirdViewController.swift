@@ -23,7 +23,7 @@ class ThirdViewController: UIViewController,UITableViewDelegate,UITableViewDataS
             favArr = myDefault.object(forKey: "favArr") as! [String]
         }
         print(favArr)
-        
+      
     }
         
         //行数の設定
@@ -35,10 +35,11 @@ class ThirdViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         func tableView(_ tableView:UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-            cell.textLabel?.text = "favArr[indexPath.row]"
+            cell.textLabel?.text = favArr[indexPath.row]
             
             return cell
         }
+    
     
     // すわいぷで消去
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
@@ -46,7 +47,6 @@ class ThirdViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         tableView.deleteRows(at: [indexPath], with: .fade)
             self.myDefault.removeObject(forKey: "favArr")
             self.myDefault.synchronize()
-            self.myTableView.reloadData()
     }
     return [deleteButton]
     }

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-//import WebKit
 import MapKit
 
 class SecondViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,MKMapViewDelegate{
@@ -36,17 +35,10 @@ class SecondViewController: UIViewController,UICollectionViewDelegate,UICollecti
         return actList.count
     }
    
-//    @IBOutlet weak var webView: UIWebView!
-    
     @IBOutlet weak var myMap: MKMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-//        //webview
-//        let url = URL(string: "https://www.google.com/maps/d/embed?mid=18MI9u6nJfjb9W6jlzh3__tKlUH4&hl=en_US")
-//        let request = URLRequest(url: url!)
-//        webView.loadRequest(request)
         
         //map
         let coordinate = CLLocationCoordinate2DMake(27.368889, 128.566667)

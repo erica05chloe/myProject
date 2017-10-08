@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import MapKit
+//import DOFavoriteButton
 
 class DetailViewController: UIViewController {
     
@@ -26,15 +27,14 @@ class DetailViewController: UIViewController {
     
     //お気に入りbutton
     @IBOutlet weak var tapStar: UIButton!
-
+    
+//    @IBOutlet weak var button: DOFavoriteButton!
     
     var myDefault = UserDefaults.standard
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
 
         if scSelectedAct == "" {
             
@@ -99,6 +99,16 @@ class DetailViewController: UIViewController {
                     }
             }
         }
+//        button.addTarget(self, action: Selector("tapped:"), forControlEvents: .TouchUpInside)
+//        func tapped(sender: DOFavoriteButton) {
+//            if sender.selected {
+//                // deselect
+//                sender.deselect()
+//            } else {
+//                // select with animation
+//                sender.select()
+//            }
+//        }
     }
     
     //タップして配列に追加
@@ -111,19 +121,15 @@ class DetailViewController: UIViewController {
         if (scSelectedAct == ""){
             
             favArr.append(scSelectedRest)
-            
+           
         }else{
             
             favArr.append(scSelectedAct)
             
         }
             myDefault.set(favArr, forKey: "favArr")
-            myDefault.string(forKey: "favArr")
             self.myDefault.synchronize()
-            myDefault.data(forKey: "favArr")
-    
     }
-    
     
     
     override func didReceiveMemoryWarning() {

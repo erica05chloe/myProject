@@ -21,8 +21,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qty-po-ySF">
+                                <rect key="frame" x="272" y="18" width="87" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="おまかせ"/>
+                                <connections>
+                                    <action selector="tapRec:" destination="9pv-A4-QxB" eventType="touchUpInside" id="dRX-Jb-e0y"/>
+                                    <segue destination="Ll8-sT-wk8" kind="presentation" identifier="modal" modalPresentationStyle="overCurrentContext" id="KYV-MK-VoX"/>
+                                </connections>
+                            </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Pvy-fi-JY8">
-                                <rect key="frame" x="0.0" y="167" width="375" height="455"/>
+                                <rect key="frame" x="0.0" y="60" width="375" height="514"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jUT-SF-9pG">
@@ -54,21 +64,20 @@
                                         </view>
                                     </collectionViewCell>
                                 </cells>
-                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="TeR-3F-Kb6" customClass="TestCollectionReusableView" customModule="myProject" customModuleProvider="target">
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TestSection" id="TeR-3F-Kb6" customClass="TestCollectionReusableView" customModule="myProject" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yth-Ba-v2a">
-                                            <rect key="frame" x="0.0" y="8" width="367" height="34"/>
+                                            <rect key="frame" x="19" y="8" width="348" height="34"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <connections>
-                                        <outlet property="testLabel" destination="yth-Ba-v2a" id="WNQ-1K-m00"/>
-                                        <outlet property="testLabl" destination="yth-Ba-v2a" id="h9D-u1-ble"/>
+                                        <outlet property="testLabel" destination="yth-Ba-v2a" id="BxP-N6-Tcq"/>
                                     </connections>
                                 </collectionReusableView>
                                 <connections>
@@ -76,16 +85,6 @@
                                     <outlet property="delegate" destination="9pv-A4-QxB" id="Cyl-ky-1fu"/>
                                 </connections>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qty-po-ySF">
-                                <rect key="frame" x="272" y="18" width="87" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="おまかせ"/>
-                                <connections>
-                                    <action selector="tapRec:" destination="9pv-A4-QxB" eventType="touchUpInside" id="dRX-Jb-e0y"/>
-                                    <segue destination="Ll8-sT-wk8" kind="presentation" identifier="modal" modalPresentationStyle="overCurrentContext" id="KYV-MK-VoX"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -244,21 +243,14 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tlK-vo-4zN">
-                                <rect key="frame" x="293" y="5" width="87" height="50"/>
+                                <rect key="frame" x="248" y="-34" width="177" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="熱盛" image="fav1.png" backgroundImage="fav1.png">
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="熱盛">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="tapStar:" destination="d7T-q7-uSe" eventType="touchUpInside" id="Pvm-c3-Dyz"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRt-Zh-seb">
-                                <rect key="frame" x="0.0" y="0.0" width="106" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="&lt; BACK"/>
-                                <connections>
-                                    <action selector="tapBack:" destination="d7T-q7-uSe" eventType="touchUpInside" id="sat-1b-IcB"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Vei-1Q-8xQ">
@@ -269,11 +261,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRt-Zh-seb">
+                                <rect key="frame" x="0.0" y="0.0" width="106" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="&lt; BACK"/>
+                                <connections>
+                                    <action selector="tapBack:" destination="d7T-q7-uSe" eventType="touchUpInside" id="sat-1b-IcB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="ck0-ir-usp"/>
                     <connections>
+                        <outlet property="button" destination="tlK-vo-4zN" id="R4X-b0-XYX"/>
                         <outlet property="myDesc" destination="vlV-QX-46U" id="QPs-UZ-xbZ"/>
                         <outlet property="myImage" destination="7dS-Ml-0vs" id="CGt-aJ-NLa"/>
                         <outlet property="myInform" destination="Vei-1Q-8xQ" id="Wa6-9s-cqV"/>
@@ -366,7 +367,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kgG-2w-mDp">
-                                <rect key="frame" x="0.0" y="62" width="375" height="556"/>
+                                <rect key="frame" x="0.0" y="128" width="375" height="490"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -418,7 +419,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="fav1.png" width="50" height="50"/>
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>
