@@ -21,18 +21,35 @@ class FirstViewController: UIViewController,UICollectionViewDelegate,UICollectio
     var selectedRest = ""
     var sectionIndex:[String] = ["居酒屋","カフェ","島料理","バー","中華料理","和食","洋食"]
     
+    //セクションの変数 高速列挙できる？
+    var izakaya:[String] = []
+    var cafe:[String] = []
+    var shima:[String] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
+    let filePath = Bundle.main.path(forResource: "genreList", ofType: "plist")
+    let dic = NSDictionary(contentsOfFile:filePath!)
+        
+        for(key,data) in dic!{
+            
+        }
+    
     }
 
     //セルの取得
      func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
          let cell:UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
+       
+        
 
-        let label = cell.contentView.viewWithTag(1) as! UILabel
-        label.text = selectList[indexPath.row]
-        let imageView = cell.contentView.viewWithTag(2) as! UIImageView
-        imageView.image = UIImage(named:selectImageList[indexPath.row])
+        
+        
+//        let label = cell.contentView.viewWithTag(1) as! UILabel
+//        label.text = selectList[indexPath.row]
+//        let imageView = cell.contentView.viewWithTag(2) as! UIImageView
+//        imageView.image = UIImage(named:selectImageList[indexPath.row])
 
 //        label.text = restList[indexPath.row]
 //        imageView.image = UIImage(named: restImage[indexPath.row])

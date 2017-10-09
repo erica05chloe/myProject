@@ -22,9 +22,11 @@
 		14A21FF41F7BFE1C0070DDB2 /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A21FF31F7BFE1C0070DDB2 /* ModalViewController.swift */; };
 		14E841061F77DE2700165988 /* RestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E841051F77DE2700165988 /* RestView.swift */; };
 		14F5448F1F709B4700984A71 /* actList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14F5448E1F709B4700984A71 /* actList.plist */; };
+		F4A30612950B4B056B14EBCC /* Pods_myProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39EE0F9AF1CD56802866013E /* Pods_myProject.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E8DEDA8D476807FEA0D407B /* Pods-myProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-myProject/Pods-myProject.debug.xcconfig"; sourceTree = "<group>"; };
 		143730591F80F924009DD479 /* TestCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCollectionReusableView.swift; sourceTree = "<group>"; };
 		144EE1571F77983B00CEE708 /* genreList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = genreList.plist; sourceTree = "<group>"; };
 		145B88A51F8A338900BD3360 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -43,6 +45,8 @@
 		14A21FF31F7BFE1C0070DDB2 /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 		14E841051F77DE2700165988 /* RestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestView.swift; sourceTree = "<group>"; };
 		14F5448E1F709B4700984A71 /* actList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = actList.plist; sourceTree = "<group>"; };
+		39EE0F9AF1CD56802866013E /* Pods_myProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E19EE2A75547979C7534C62 /* Pods-myProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-myProject/Pods-myProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				145B88A61F8A338A00BD3360 /* CoreLocation.framework in Frameworks */,
+				F4A30612950B4B056B14EBCC /* Pods_myProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				145B88A51F8A338900BD3360 /* CoreLocation.framework */,
+				39EE0F9AF1CD56802866013E /* Pods_myProject.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -109,6 +115,8 @@
 		3137958BCDBD491431F1062A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				0E8DEDA8D476807FEA0D407B /* Pods-myProject.debug.xcconfig */,
+				3E19EE2A75547979C7534C62 /* Pods-myProject.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -377,6 +385,7 @@
 		};
 		146A446F1F6E469E003A21C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E8DEDA8D476807FEA0D407B /* Pods-myProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Z4CH2GS5V9;
@@ -390,6 +399,7 @@
 		};
 		146A44701F6E469E003A21C4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E19EE2A75547979C7534C62 /* Pods-myProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Z4CH2GS5V9;
