@@ -13,46 +13,83 @@ class FirstViewController: UIViewController,UICollectionViewDelegate,UICollectio
     @IBOutlet weak var foodCollection: UICollectionView!
     
     var restList:[String] = []
-    var selectList:[String] = []
+//    var selectList:[String] = []
     var selectImageList = [""]
     var restImage = ["party","fam","level","les","typhoon","buera","free","gusto","saigou","ouchi","terumani","abashi","akuru","thiza","pure","seriyosa","rai","katuo","tougura","haisai","sasagawa","kaikou","furusato","zen","rihu","sky","kiyoi","nana","kagura","sou","ikki","dou","sama","shunkou","shou","kaihou","shiosai","taiko","en","hoo","kasa"]
+    var rI = ["nana","kagura","sou","ikki","taiko","en"]
+    var rI2 = ["typhoon","ouchi","terumani","akuru","thiza","shiosai","kasa"]
+    var rI3 = ["saigou","abashi","haisai","sasagawa","furusato","dou","sama","shunkou","shou","kaihou","hoo"]
+    var rI4 = ["level","les","free","sky"]
+    var rI5 = ["rai"]
+    var rI6 = ["pure","katuo","tougura","kaikou","zen","kiyoi"]
+    var rI7 = ["party","fam","buera","gusto","seriyosa","rihu"]
+    
     
     var selectedImage: UIImage?
     var selectedRest = ""
     var sectionIndex:[String] = ["居酒屋","カフェ","島料理","バー","中華料理","和食","洋食"]
     
     //セクションの変数 高速列挙できる？
-    var izakaya:[String] = []
-    var cafe:[String] = []
-    var shima:[String] = []
+//    var izakaya:[String] = []
+//    var cafe:[String] = []
+//    var shima:[String] = []
     
+    //多次元配列の初期化
+    var plistArr = [Dictionary<String, String>]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
     let filePath = Bundle.main.path(forResource: "genreList", ofType: "plist")
-    let dic = NSDictionary(contentsOfFile:filePath!)
+    //参照したplistを、初期化した配列に納入
+//    plistArr = NSArray(contentsOfFile: filePath!) as! [Dictionary<String, String>]
         
-        for(key,data) in dic!{
-            
-        }
-    
     }
 
     //セルの取得
      func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
          let cell:UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
-       
+        let label = cell.contentView.viewWithTag(1) as! UILabel
+        let imageView = cell.contentView.viewWithTag(2) as! UIImageView
+
+        switch (indexPath.section){
+        case 0:
+//            label.text = plistArr[indexPath.row]["Item 0"]
+            imageView.image = UIImage(named: rI[indexPath.row])
+
+        case 1:
+//            label.text = plistArr[indexPath.row]["Item 1"]
+            imageView.image = UIImage(named: rI2[indexPath.row])
+
+        case 2:
+//            label.text = plistArr[indexPath.row]["Item 2"]
+            imageView.image = UIImage(named: rI3[indexPath.row])
+
+        case 3:
+//            label.text = plistArr[indexPath.row]["Item 3"]
+            imageView.image = UIImage(named: rI4[indexPath.row])
+
+        case 4:
+//            label.text = plistArr[indexPath.row]["Item 4"]
+            imageView.image = UIImage(named: rI5[indexPath.row])
+
+        case 5:
+//            label.text = plistArr[indexPath.row]["Item 5"]
+            imageView.image = UIImage(named: rI6[indexPath.row])
+
+        case 6:
+//            label.text = plistArr[indexPath.row]["Item 6"]
+            imageView.image = UIImage(named: rI7[indexPath.row])
+
+        default:
+             print("error")
+        }
         
 
         
-        
-//        let label = cell.contentView.viewWithTag(1) as! UILabel
-//        label.text = selectList[indexPath.row]
-//        let imageView = cell.contentView.viewWithTag(2) as! UIImageView
-//        imageView.image = UIImage(named:selectImageList[indexPath.row])
-
+//       let label = cell.contentView.viewWithTag(1) as! UILabel
+//        label.text = plistArr[indexPath.row][""]
 //        label.text = restList[indexPath.row]
-//        imageView.image = UIImage(named: restImage[indexPath.row])
 
         return cell
        
@@ -67,6 +104,7 @@ class FirstViewController: UIViewController,UICollectionViewDelegate,UICollectio
         
         switch(section){
         case 0:
+            
             return 6
             
         case 1:
@@ -113,9 +151,6 @@ class FirstViewController: UIViewController,UICollectionViewDelegate,UICollectio
         if segue.identifier == "showEatDetail" {
             let dv = (segue.destination as? DetailViewController)!
             dv.scSelectedRest = selectedRest
-//        }else if segue.identifier == "moreRest" {
-//                let dv = (segue.destination as? RestView)!
-//                dv.scSelectedGenre = selectedGenre
        }
     }
 
