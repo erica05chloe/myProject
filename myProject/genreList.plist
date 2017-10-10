@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<array>
+<dict>
+	<key>居酒屋</key>
 	<dict>
 		<key>居酒屋　なな彩</key>
 		<dict>
@@ -96,6 +97,7 @@
 			<string>128.660555</string>
 		</dict>
 	</dict>
+	<key>カフェ</key>
 	<dict>
 		<key>ティザーヌ</key>
 		<dict>
@@ -203,6 +205,7 @@
 			<string>128.576977</string>
 		</dict>
 	</dict>
+	<key>島料理</key>
 	<dict>
 		<key>左馬</key>
 		<dict>
@@ -371,6 +374,7 @@
 			<string>128.655964</string>
 		</dict>
 	</dict>
+	<key>バー</key>
 	<dict>
 		<key>大山スカイクラブ</key>
 		<dict>
@@ -433,6 +437,7 @@
 			<string>128.658719</string>
 		</dict>
 	</dict>
+	<key>中華</key>
 	<dict>
 		<key>中華料理来来</key>
 		<dict>
@@ -450,6 +455,7 @@
 			<string>128.656308</string>
 		</dict>
 	</dict>
+	<key>和食</key>
 	<dict>
 		<key>ピュアゴールド宮花庭</key>
 		<dict>
@@ -545,6 +551,7 @@
 			<string>128.657333</string>
 		</dict>
 	</dict>
+	<key>洋食</key>
 	<dict>
 		<key>gusto</key>
 		<dict>
@@ -637,5 +644,5 @@
 			<string>128.572267</string>
 		</dict>
 	</dict>
-</array>
+</dict>
 </plist>

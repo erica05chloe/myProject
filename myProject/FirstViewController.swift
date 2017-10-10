@@ -15,8 +15,8 @@ class FirstViewController: UIViewController,UICollectionViewDelegate,UICollectio
     var restList:[String] = []
 //    var selectList:[String] = []
     var selectImageList = [""]
-    var restImage = ["party","fam","level","les","typhoon","buera","free","gusto","saigou","ouchi","terumani","abashi","akuru","thiza","pure","seriyosa","rai","katuo","tougura","haisai","sasagawa","kaikou","furusato","zen","rihu","sky","kiyoi","nana","kagura","sou","ikki","dou","sama","shunkou","shou","kaihou","shiosai","taiko","en","hoo","kasa"]
-    var rI = ["nana","kagura","sou","ikki","taiko","en"]
+//    var restImage = ["party","fam","level","les","typhoon","buera","free","gusto","saigou","ouchi","terumani","abashi","akuru","thiza","pure","seriyosa","rai","katuo","tougura","haisai","sasagawa","kaikou","furusato","zen","rihu","sky","kiyoi","nana","kagura","sou","ikki","dou","sama","shunkou","shou","kaihou","shiosai","taiko","en","hoo","kasa"]
+    var rI = [""]
     var rI2 = ["typhoon","ouchi","terumani","akuru","thiza","shiosai","kasa"]
     var rI3 = ["saigou","abashi","haisai","sasagawa","furusato","dou","sama","shunkou","shou","kaihou","hoo"]
     var rI4 = ["level","les","free","sky"]
@@ -24,25 +24,35 @@ class FirstViewController: UIViewController,UICollectionViewDelegate,UICollectio
     var rI6 = ["pure","katuo","tougura","kaikou","zen","kiyoi"]
     var rI7 = ["party","fam","buera","gusto","seriyosa","rihu"]
     
+    var rIdic = NSDictionary()
     
     var selectedImage: UIImage?
     var selectedRest = ""
     var sectionIndex:[String] = ["居酒屋","カフェ","島料理","バー","中華料理","和食","洋食"]
-    
-    //セクションの変数 高速列挙できる？
-//    var izakaya:[String] = []
-//    var cafe:[String] = []
-//    var shima:[String] = []
-    
-    //多次元配列の初期化
-    var plistArr = [Dictionary<String, String>]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
     let filePath = Bundle.main.path(forResource: "genreList", ofType: "plist")
-    //参照したplistを、初期化した配列に納入
-//    plistArr = NSArray(contentsOfFile: filePath!) as! [Dictionary<String, String>]
+    let dic = NSDictionary(contentsOfFile: filePath!)
+        
+        rIdic = dic!["居酒屋"] as! NSDictionary
+        rI = []
+        for((key),data) in rIdic{
+            var name:NSDictionary = key as! NSDictionary
+            var datacontents:NSDictionary = data as! NSDictionary
+            rI.append(name["key"] as! String)
+            rI.append(datacontents["image"] as! String)
+        }
+//       rIdic2 = dic!["カフェ"] as! NSDictionary
+//       rI2 = []
+//       for(key,data) in rIdic2{
+//         var name:NSDictionary = key as! NSDictionary
+//         var datacontents:NSDictionary = data as! NSDictionary
+//         rI2.append(name["key"] as! String)
+//         rI2.append(datacontents["image"] as! String)
+//        }
+        
         
     }
 
@@ -54,9 +64,9 @@ class FirstViewController: UIViewController,UICollectionViewDelegate,UICollectio
 
         switch (indexPath.section){
         case 0:
-//            label.text = plistArr[indexPath.row]["Item 0"]
+//            label.text = rI[indexPath.row]
             imageView.image = UIImage(named: rI[indexPath.row])
-
+            
         case 1:
 //            label.text = plistArr[indexPath.row]["Item 1"]
             imageView.image = UIImage(named: rI2[indexPath.row])
