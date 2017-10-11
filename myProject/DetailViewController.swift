@@ -20,15 +20,15 @@ class DetailViewController: UIViewController {
         self.dismiss(animated: true, completion: {})
     }
     
+    @IBOutlet weak var myLabel: UILabel!
     @IBOutlet weak var myImage: UIImageView!
     @IBOutlet weak var myInform: UITextView!
     @IBOutlet weak var myDesc: UITextView!
     @IBOutlet weak var myMap: MKMapView!
     
     //お気に入りbutton
-    @IBOutlet weak var tapStar: UIButton!
-    
-//    @IBOutlet weak var button: DOFavoriteButton!
+   
+    @IBOutlet weak var tapStar: DOFavoriteButton!
     
     var myDefault = UserDefaults.standard
     
@@ -50,6 +50,7 @@ class DetailViewController: UIViewController {
                 let dicForData:NSDictionary = data as! NSDictionary
                 if((key as! NSString) as String == scSelectedRest){
                     navigationItem.title = scSelectedRest
+                    myLabel.text = dicForData["key"] as? String
                     myDesc.text = dicForData["description"] as! String
                     myInform.text = dicForData["inform"] as! String
                     myImage.image = UIImage(named:dicForData["image"] as! String)
@@ -80,6 +81,7 @@ class DetailViewController: UIViewController {
                     let dicForData:NSDictionary = data as! NSDictionary
                     if((key as! NSString) as String == scSelectedAct){
                         navigationItem.title = scSelectedAct
+                        myLabel.text = dicForData["key"] as? String
                         myDesc.text = dicForData["description"] as! String
                         myInform.text = dicForData["inform"] as! String
                         myImage.image = UIImage(named:dicForData["image"] as! String)
@@ -99,38 +101,52 @@ class DetailViewController: UIViewController {
                     }
             }
         }
-//        button.addTarget(self, action: Selector("tapped:"), forControlEvents: .TouchUpInside)
-//        func tapped(sender: DOFavoriteButton) {
-//            if sender.selected {
-//                // deselect
-//                sender.deselect()
-//            } else {
-//                // select with animation
-//                sender.select()
-//            }
-//        }
+       
+        tapStar.addTarget(self, action: Selector(("tapped:")), for: .touchUpInside)
     }
     
-    //タップして配列に追加
-    @IBAction func tapStar(_ sender: UIButton) {
-        // 空の配列を用意
-        var favArr:[String] = []
-        
-        if myDefault.object(forKey: "favArr") != nil{
-            favArr = myDefault.object(forKey: "favArr") as! [String] }
-        if (scSelectedAct == ""){
+//    //タップして配列に追加
+//    @IBAction func tapStar(_ sender: UIButton) {
+//        // 空の配列を用意
+//        var favArr:[String] = []
+//
+//        if myDefault.object(forKey: "favArr") != nil{
+//            favArr = myDefault.object(forKey: "favArr") as! [String] }
+//        if (scSelectedAct == ""){
+//
+//            favArr.append(scSelectedRest)
+//
+//        }else{
+//
+//            favArr.append(scSelectedAct)
+//
+//        }
+//            myDefault.set(favArr, forKey: "favArr")
+//            self.myDefault.synchronize()
+//    }
+//
+    
+    func tapped(sender: DOFavoriteButton) {
+        if sender.isSelected {
+            // 空の配列を用意
+            var favArr:[String] = []
             
-            favArr.append(scSelectedRest)
-           
-        }else{
-            
-            favArr.append(scSelectedAct)
-            
-        }
+            if myDefault.object(forKey: "favArr") != nil{
+                favArr = myDefault.object(forKey: "favArr") as! [String] }
+            if (scSelectedAct == ""){
+                favArr.append(scSelectedRest)
+                sender.select()
+        } else {
+                favArr.append(scSelectedAct)
+            }
             myDefault.set(favArr, forKey: "favArr")
             self.myDefault.synchronize()
+            sender.select()
+        } else {
+            // deselect
+            sender.deselect()
+        }
     }
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

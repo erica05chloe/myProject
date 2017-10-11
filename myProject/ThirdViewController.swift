@@ -19,11 +19,20 @@ class ThirdViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        if myDefault.object(forKey: "favArr") != nil{
+//            favArr = myDefault.object(forKey: "favArr") as! [String]
+//        }
+//        print(favArr)
+      
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
         if myDefault.object(forKey: "favArr") != nil{
             favArr = myDefault.object(forKey: "favArr") as! [String]
         }
         print(favArr)
-      
+        myTableView.reloadData()
     }
         
         //行数の設定
@@ -52,8 +61,6 @@ class ThirdViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     }
         
        
-    
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

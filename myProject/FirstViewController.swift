@@ -13,22 +13,28 @@ class FirstViewController: UIViewController,UICollectionViewDelegate,UICollectio
     @IBOutlet weak var foodCollection: UICollectionView!
     
     var restList:[String] = []
-//    var selectList:[String] = []
     var selectImageList = [""]
-//    var restImage = ["party","fam","level","les","typhoon","buera","free","gusto","saigou","ouchi","terumani","abashi","akuru","thiza","pure","seriyosa","rai","katuo","tougura","haisai","sasagawa","kaikou","furusato","zen","rihu","sky","kiyoi","nana","kagura","sou","ikki","dou","sama","shunkou","shou","kaihou","shiosai","taiko","en","hoo","kasa"]
+
+    // plistから取得する変数
     var rI = [""]
-    var rI2 = ["typhoon","ouchi","terumani","akuru","thiza","shiosai","kasa"]
-    var rI3 = ["saigou","abashi","haisai","sasagawa","furusato","dou","sama","shunkou","shou","kaihou","hoo"]
-    var rI4 = ["level","les","free","sky"]
-    var rI5 = ["rai"]
-    var rI6 = ["pure","katuo","tougura","kaikou","zen","kiyoi"]
-    var rI7 = ["party","fam","buera","gusto","seriyosa","rihu"]
-    
+    var rIname = [""]
+    var rI2 = [""]
+    var rI2name = [""]
+    var rI3 = [""]
+    var rI3name = [""]
+    var rI4 = [""]
+    var rI4name = [""]
+    var rI5 = [""]
+    var rI5name = [""]
+    var rI6 = [""]
+    var rI6name = [""]
+    var rI7 = [""]
+    var rI7name = [""]
     var rIdic = NSDictionary()
     
     var selectedImage: UIImage?
     var selectedRest = ""
-    var sectionIndex:[String] = ["居酒屋","カフェ","島料理","バー","中華料理","和食","洋食"]
+    var sectionIndex:[String] = ["居酒屋","Cafe","島料理","Bar","中華","和食","洋食"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,22 +44,67 @@ class FirstViewController: UIViewController,UICollectionViewDelegate,UICollectio
         
         rIdic = dic!["居酒屋"] as! NSDictionary
         rI = []
-        for((key),data) in rIdic{
-            var name:NSDictionary = key as! NSDictionary
-            var datacontents:NSDictionary = data as! NSDictionary
-            rI.append(name["key"] as! String)
+        rIname = []
+        for(key,data) in rIdic{
+            let name = key as! String
+            let datacontents:NSDictionary = data as! NSDictionary
+            rIname.append(name )
             rI.append(datacontents["image"] as! String)
         }
-//       rIdic2 = dic!["カフェ"] as! NSDictionary
-//       rI2 = []
-//       for(key,data) in rIdic2{
-//         var name:NSDictionary = key as! NSDictionary
-//         var datacontents:NSDictionary = data as! NSDictionary
-//         rI2.append(name["key"] as! String)
-//         rI2.append(datacontents["image"] as! String)
-//        }
-        
-        
+       rIdic = dic!["カフェ"] as! NSDictionary
+       rI2 = []
+       rI2name = []
+       for(key,data) in rIdic{
+        let name = key as! String
+        let datacontents:NSDictionary = data as! NSDictionary
+        rI2name.append(name )
+         rI2.append(datacontents["image"] as! String)
+        }
+        rIdic = dic!["島料理"] as! NSDictionary
+        rI3 = []
+        rI3name = []
+        for(key,data) in rIdic{
+            let name = key as! String
+            let datacontents:NSDictionary = data as! NSDictionary
+            rI3name.append(name )
+            rI3.append(datacontents["image"] as! String)
+        }
+        rIdic = dic!["バー"] as! NSDictionary
+        rI4 = []
+        rI4name = []
+        for(key,data) in rIdic{
+            let name = key as! String
+            let datacontents:NSDictionary = data as! NSDictionary
+            rI4name.append(name )
+            rI4.append(datacontents["image"] as! String)
+        }
+        rIdic = dic!["中華"] as! NSDictionary
+        rI5 = []
+        rI5name = []
+        for(key,data) in rIdic{
+            let name = key as! String
+            let datacontents:NSDictionary = data as! NSDictionary
+            rI5name.append(name )
+            rI5.append(datacontents["image"] as! String)
+        }
+        rIdic = dic!["和食"] as! NSDictionary
+        rI6 = []
+        rI6name = []
+        for(key,data) in rIdic{
+            let name = key as! String
+            let datacontents:NSDictionary = data as! NSDictionary
+            rI6name.append(name )
+            rI6.append(datacontents["image"] as! String)
+        }
+        rIdic = dic!["洋食"] as! NSDictionary
+        rI7 = []
+        rI7name = []
+        for(key,data) in rIdic{
+            let name = key as! String
+            let datacontents:NSDictionary = data as! NSDictionary
+            rI7name.append(name )
+            rI7.append(datacontents["image"] as! String)
+        }
     }
 
     //セルの取得
@@ -64,43 +115,37 @@ class FirstViewController: UIViewController,UICollectionViewDelegate,UICollectio
 
         switch (indexPath.section){
         case 0:
-//            label.text = rI[indexPath.row]
+            label.text = rIname[indexPath.row]
             imageView.image = UIImage(named: rI[indexPath.row])
             
         case 1:
-//            label.text = plistArr[indexPath.row]["Item 1"]
+            label.text = rI2name[indexPath.row]
             imageView.image = UIImage(named: rI2[indexPath.row])
 
         case 2:
-//            label.text = plistArr[indexPath.row]["Item 2"]
+            label.text = rI3name[indexPath.row]
             imageView.image = UIImage(named: rI3[indexPath.row])
 
         case 3:
-//            label.text = plistArr[indexPath.row]["Item 3"]
+            label.text = rI4name[indexPath.row]
             imageView.image = UIImage(named: rI4[indexPath.row])
 
         case 4:
-//            label.text = plistArr[indexPath.row]["Item 4"]
+            label.text = rI5name[indexPath.row]
             imageView.image = UIImage(named: rI5[indexPath.row])
 
         case 5:
-//            label.text = plistArr[indexPath.row]["Item 5"]
+            label.text = rI6name[indexPath.row]
             imageView.image = UIImage(named: rI6[indexPath.row])
 
         case 6:
-//            label.text = plistArr[indexPath.row]["Item 6"]
+            label.text = rI7name[indexPath.row]
             imageView.image = UIImage(named: rI7[indexPath.row])
 
         default:
              print("error")
         }
         
-
-        
-//       let label = cell.contentView.viewWithTag(1) as! UILabel
-//        label.text = plistArr[indexPath.row][""]
-//        label.text = restList[indexPath.row]
-
         return cell
        
     }
@@ -153,8 +198,34 @@ class FirstViewController: UIViewController,UICollectionViewDelegate,UICollectio
 
     //選択されたセル
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        selectedRest = restList[indexPath.row]
-        performSegue(withIdentifier: "showEatDetail", sender: nil)
+        switch(indexPath.section){
+        case 0:
+            selectedRest = rIname[indexPath.row]
+            performSegue(withIdentifier: "showEatDetail", sender: nil)
+        case 1:
+            selectedRest = rI2name[indexPath.row]
+            performSegue(withIdentifier: "showEatDetail", sender: nil)
+        case 2:
+            selectedRest = rI3name[indexPath.row]
+            performSegue(withIdentifier: "showEatDetail", sender: nil)
+        case 3:
+            selectedRest = rI4name[indexPath.row]
+            performSegue(withIdentifier: "showEatDetail", sender: nil)
+        case 4:
+            selectedRest = rI5name[indexPath.row]
+            performSegue(withIdentifier: "showEatDetail", sender: nil)
+        case 5:
+            selectedRest = rI6name[indexPath.row]
+            performSegue(withIdentifier: "showEatDetail", sender: nil)
+        case 6:
+            selectedRest = rI7name[indexPath.row]
+            performSegue(withIdentifier: "showEatDetail", sender: nil)
+    
+            
+        default:
+            print("error")
+        }
+    
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
@@ -167,18 +238,6 @@ class FirstViewController: UIViewController,UICollectionViewDelegate,UICollectio
     //modalviewにとぶ
     @IBAction func tapRec(_ sender: UIButton) {
 
-//    let ranRes = Int(arc4random()) % restImage.count
-//
-//    let alert = UIAlertController(title: "迷ったら...", message:"", preferredStyle: .alert)
-//
-//    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-//
-//    //アラートにimageを表示
-//        let imageView = UIImageView(frame: CGRect(x:0, y:0, width:100, height:100))
-//        imageView.image = UIImage(named: restImage[ranRes])
-//            alert.view.addSubview(imageView)
-//
-//    present(alert,animated: true, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {

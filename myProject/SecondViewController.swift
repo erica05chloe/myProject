@@ -118,7 +118,7 @@ class SecondViewController: UIViewController,UICollectionViewDelegate,UICollecti
         //ファイルの内容を読み込んでディクショナリー型に格納
         let dic = NSDictionary(contentsOfFile:filePath!)
         
-        for(key,data) in dic! {
+        for(key,_) in dic! {
             print(key)
             actList.append(key as! String)
         }
