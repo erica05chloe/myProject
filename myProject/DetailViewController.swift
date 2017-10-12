@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 import MapKit
-//import DOFavoriteButton
+import FaveButton
 
 class DetailViewController: UIViewController {
     
@@ -26,9 +26,6 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var myDesc: UITextView!
     @IBOutlet weak var myMap: MKMapView!
     
-    //お気に入りbutton
-   
-    @IBOutlet weak var tapStar: DOFavoriteButton!
     
     var myDefault = UserDefaults.standard
     
@@ -44,13 +41,14 @@ class DetailViewController: UIViewController {
             let dic = NSDictionary(contentsOfFile:filePath!)
             print(dic?[scSelectedRest])
             
-            //restaurant plistから読み込む
+            //genreplistから読み込む
             
             for(key,data) in dic!{
                 let dicForData:NSDictionary = data as! NSDictionary
+                let name = key as! String
                 if((key as! NSString) as String == scSelectedRest){
                     navigationItem.title = scSelectedRest
-                    myLabel.text = dicForData["key"] as? String
+                    myLabel.text = name
                     myDesc.text = dicForData["description"] as! String
                     myInform.text = dicForData["inform"] as! String
                     myImage.image = UIImage(named:dicForData["image"] as! String)
@@ -79,9 +77,10 @@ class DetailViewController: UIViewController {
                 
                 for(key,data) in dic!{
                     let dicForData:NSDictionary = data as! NSDictionary
+                    let name = key as! String
                     if((key as! NSString) as String == scSelectedAct){
                         navigationItem.title = scSelectedAct
-                        myLabel.text = dicForData["key"] as? String
+                        myLabel.text = name
                         myDesc.text = dicForData["description"] as! String
                         myInform.text = dicForData["inform"] as! String
                         myImage.image = UIImage(named:dicForData["image"] as! String)
@@ -101,11 +100,11 @@ class DetailViewController: UIViewController {
                     }
             }
         }
-       
-        tapStar.addTarget(self, action: Selector(("tapped:")), for: .touchUpInside)
     }
     
-//    //タップして配列に追加
+    @IBAction func tappedStar(_ sender: FaveButton) {
+    }
+    //    //タップして配列に追加
 //    @IBAction func tapStar(_ sender: UIButton) {
 //        // 空の配列を用意
 //        var favArr:[String] = []
@@ -124,29 +123,7 @@ class DetailViewController: UIViewController {
 //            myDefault.set(favArr, forKey: "favArr")
 //            self.myDefault.synchronize()
 //    }
-//
-    
-    func tapped(sender: DOFavoriteButton) {
-        if sender.isSelected {
-            // 空の配列を用意
-            var favArr:[String] = []
-            
-            if myDefault.object(forKey: "favArr") != nil{
-                favArr = myDefault.object(forKey: "favArr") as! [String] }
-            if (scSelectedAct == ""){
-                favArr.append(scSelectedRest)
-                sender.select()
-        } else {
-                favArr.append(scSelectedAct)
-            }
-            myDefault.set(favArr, forKey: "favArr")
-            self.myDefault.synchronize()
-            sender.select()
-        } else {
-            // deselect
-            sender.deselect()
-        }
-    }
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

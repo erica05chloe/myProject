@@ -1,12 +1,12 @@
 PODS:
-  - DOFavoriteButton (0.0.4)
+  - FaveButton (2.0.3)
 
 DEPENDENCIES:
-  - DOFavoriteButton
+  - FaveButton
 
 SPEC CHECKSUMS:
-  DOFavoriteButton: 866e15af173d2dd5233971a1f657a5f31d2491d5
+  FaveButton: cfcbc5e73da159c4f916613da5687357b5bb4783
 
-PODFILE CHECKSUM: 8e141c5eb8664b1c41ad32b93fdab4c40506cadf
+PODFILE CHECKSUM: 8e3cb4c415d72ccc03df5606f3f292244a98e327
 
 COCOAPODS: 1.3.1

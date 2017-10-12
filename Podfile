@@ -8,6 +8,6 @@ target 'myProject' do
   use_frameworks!
 
   # Pods for myProject
-pod 'DOFavoriteButton'
+pod 'FaveButton'
 
 end

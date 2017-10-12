@@ -25,23 +25,6 @@
 		14F5448F1F709B4700984A71 /* actList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14F5448E1F709B4700984A71 /* actList.plist */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		1485B7661F8EDD7B0016F82D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1485B7611F8EDD7B0016F82D /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 53DA1D281352D17A48123DAF98DC3B69;
-			remoteInfo = DOFavoriteButton;
-		};
-		1485B7681F8EDD7B0016F82D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1485B7611F8EDD7B0016F82D /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 907B89BE99914E56A60D07CEEF7F4BEF;
-			remoteInfo = "Pods-myProject";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		143730591F80F924009DD479 /* TestCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCollectionReusableView.swift; sourceTree = "<group>"; };
 		144EE1571F77983B00CEE708 /* genreList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = genreList.plist; sourceTree = "<group>"; };
@@ -58,7 +41,6 @@
 		146A44711F6E483C003A21C4 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		146A44771F6E5859003A21C4 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		146A44791F6E5E3E003A21C4 /* restaurantList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = restaurantList.plist; sourceTree = "<group>"; };
-		1485B7611F8EDD7B0016F82D /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = /Users/ericachloe/Documents/iOS20170807/myProject/Pods.xcodeproj; sourceTree = "<absolute>"; };
 		14A21FF31F7BFE1C0070DDB2 /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 		14CBD7BD1F8E94D900F84EDC /* project.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; name = project.xcworkspace; path = myProject.xcodeproj/project.xcworkspace; sourceTree = "<group>"; };
 		14CBD7C71F8E9C4E00F84EDC /* DOFavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DOFavoriteButton.swift; sourceTree = "<group>"; };
@@ -96,7 +78,6 @@
 				14CBD7BD1F8E94D900F84EDC /* project.xcworkspace */,
 				145B88A51F8A338900BD3360 /* CoreLocation.framework */,
 				225B0E4855EC13938D42D9E8 /* Pods_myProject.framework */,
-				1485B7611F8EDD7B0016F82D /* Pods.xcodeproj */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -140,15 +121,6 @@
 				145B88A71F8A3A4100BD3360 /* star.png */,
 			);
 			path = myProject;
-			sourceTree = "<group>";
-		};
-		1485B7621F8EDD7B0016F82D /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				1485B7671F8EDD7B0016F82D /* DOFavoriteButton.framework */,
-				1485B7691F8EDD7B0016F82D /* Pods_myProject.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,35 +174,12 @@
 			mainGroup = 146A44511F6E469D003A21C4;
 			productRefGroup = 146A445B1F6E469D003A21C4 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 1485B7621F8EDD7B0016F82D /* Products */;
-					ProjectRef = 1485B7611F8EDD7B0016F82D /* Pods.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				146A44591F6E469D003A21C4 /* myProject */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		1485B7671F8EDD7B0016F82D /* DOFavoriteButton.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = DOFavoriteButton.framework;
-			remoteRef = 1485B7661F8EDD7B0016F82D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		1485B7691F8EDD7B0016F82D /* Pods_myProject.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Pods_myProject.framework;
-			remoteRef = 1485B7681F8EDD7B0016F82D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		146A44581F6E469D003A21C4 /* Resources */ = {
@@ -271,11 +220,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-myProject/Pods-myProject-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/DOFavoriteButton/DOFavoriteButton.framework",
+				"${BUILT_PRODUCTS_DIR}/FaveButton/FaveButton.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DOFavoriteButton.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FaveButton.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -442,6 +391,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Z4CH2GS5V9;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = myProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "erica.chloe5-gmail.com.myProject";
@@ -456,6 +406,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Z4CH2GS5V9;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = myProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "erica.chloe5-gmail.com.myProject";
