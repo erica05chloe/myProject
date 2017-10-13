@@ -8,6 +8,6 @@ target 'myProject' do
   use_frameworks!
 
   # Pods for myProject
-pod 'FaveButton'
+pod 'FaveButton', '~> 2.0.3'
 
 end

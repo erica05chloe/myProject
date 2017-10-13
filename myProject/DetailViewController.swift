@@ -102,27 +102,26 @@ class DetailViewController: UIViewController {
         }
     }
     
+    
+    //タップして配列に追加
     @IBAction func tappedStar(_ sender: FaveButton) {
+        //空の配列を用意
+        var favArr:[String] = []
+        
+        if myDefault.object(forKey: "favArr") != nil{do {
+            favArr = myDefault.object(forKey: "favArr") as! [String] }
+        if (scSelectedAct == ""){
+            favArr.append(scSelectedRest)
+        }; if (scSelectedRest == ""){
+            favArr.append(scSelectedAct)
+            }} else {if(scSelectedAct == "faArr[indexPath]"){
+            self.myDefault.removeObject(forKey: "favArr")
+        }; if (scSelectedRest == "favArr[indexPath]"){
+            self.myDefault.removeObject(forKey: "favArr")
+                }}
+        myDefault.set(favArr, forKey: "favArr")
+        self.myDefault.synchronize()
     }
-    //    //タップして配列に追加
-//    @IBAction func tapStar(_ sender: UIButton) {
-//        // 空の配列を用意
-//        var favArr:[String] = []
-//
-//        if myDefault.object(forKey: "favArr") != nil{
-//            favArr = myDefault.object(forKey: "favArr") as! [String] }
-//        if (scSelectedAct == ""){
-//
-//            favArr.append(scSelectedRest)
-//
-//        }else{
-//
-//            favArr.append(scSelectedAct)
-//
-//        }
-//            myDefault.set(favArr, forKey: "favArr")
-//            self.myDefault.synchronize()
-//    }
 
     
     override func didReceiveMemoryWarning() {

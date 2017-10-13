@@ -19,11 +19,6 @@ class ThirdViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        if myDefault.object(forKey: "favArr") != nil{
-//            favArr = myDefault.object(forKey: "favArr") as! [String]
-//        }
-//        print(favArr)
-      
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -45,6 +40,8 @@ class ThirdViewController: UIViewController,UITableViewDelegate,UITableViewDataS
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
             cell.textLabel?.text = favArr[indexPath.row]
+            //image表示する？
+            cell.imageView?.image = UIImage(named: "\(favArr[indexPath.row])")
             
             return cell
         }
