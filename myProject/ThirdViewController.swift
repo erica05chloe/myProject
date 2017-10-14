@@ -38,14 +38,34 @@ class ThirdViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         //セルに表示する文字
         func tableView(_ tableView:UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
             
+            let filePath = Bundle.main.path(forResource: "restaurantList", ofType: "plist")
+            let dic = NSDictionary(contentsOfFile:filePath!)
+            
             let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
             cell.textLabel?.text = favArr[indexPath.row]
-            //image表示する？
-            cell.imageView?.image = UIImage(named: "\(favArr[indexPath.row])")
             
+
+            //image表示する？
+            for(key,data) in dic!{
+                let dicForData:NSDictionary = data as! NSDictionary
+                if((key as! NSString) as String == favArr[indexPath.row]){
+                cell.imageView?.image = UIImage(named:dicForData["image"] as! String)
+                }else{
+                    let filePath = Bundle.main.path(forResource: "actList", ofType: "plist")
+                    
+                    let dic = NSDictionary(contentsOfFile:filePath!)
+                    for(key,data) in dic!{
+                        let dicForData:NSDictionary = data as! NSDictionary
+                        if((key as! NSString) as String == favArr[indexPath.row]){
+                            cell.imageView?.image = UIImage(named:dicForData["image"] as! String)
+                }
+              }
+             }
+            }
+            
+            cell.imageView?.contentMode = .scaleToFill
             return cell
-        }
-    
+    }
     
     // すわいぷで消去
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {

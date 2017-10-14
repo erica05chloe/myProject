@@ -28,7 +28,7 @@ class DetailViewController: UIViewController {
     
     
     var myDefault = UserDefaults.standard
-    
+    var upFlag:Bool = true  //false not tap / true tapped
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +41,7 @@ class DetailViewController: UIViewController {
             let dic = NSDictionary(contentsOfFile:filePath!)
             print(dic?[scSelectedRest])
             
-            //genreplistから読み込む
+            //genreplistから読み込む(理想)
             
             for(key,data) in dic!{
                 let dicForData:NSDictionary = data as! NSDictionary
@@ -104,23 +104,31 @@ class DetailViewController: UIViewController {
     
     
     //タップして配列に追加
-    @IBAction func tappedStar(_ sender: FaveButton) {
+    @IBAction func tappedStar(_ sender: FaveButton){
         //空の配列を用意
         var favArr:[String] = []
         
+        //配列に追加
+        if upFlag {
         if myDefault.object(forKey: "favArr") != nil{do {
             favArr = myDefault.object(forKey: "favArr") as! [String] }
         if (scSelectedAct == ""){
             favArr.append(scSelectedRest)
         }; if (scSelectedRest == ""){
             favArr.append(scSelectedAct)
-            }} else {if(scSelectedAct == "faArr[indexPath]"){
+            }
+            };upFlag = true
+        //配配列から消去
+        } else {if(scSelectedAct == "faArr"){
             self.myDefault.removeObject(forKey: "favArr")
-        }; if (scSelectedRest == "favArr[indexPath]"){
+        }; if (scSelectedRest == "favArr"){
             self.myDefault.removeObject(forKey: "favArr")
-                }}
+                }
+            upFlag = false
+        }
         myDefault.set(favArr, forKey: "favArr")
         self.myDefault.synchronize()
+        
     }
 
     
