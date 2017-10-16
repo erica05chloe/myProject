@@ -12,6 +12,8 @@ import UIKit
 class ModalViewController: UIViewController{
 
     var restImage = ["party","fam","level","les","typhoon","buera","free","gusto","saigou","ouchi","terumani","abashi","akuru","thiza","pure","seriyosa","rai","katuo","tougura","haisai","sasagawa","kaikou","furusato","zen","rihu","sky","kiyoi","nana","kagura","sou","ikki","dou","sama","shunkou","shou","kaihou","shiosai","taiko","en","hoo","kasa"]
+    var recList:[String] = []
+    var selectedRec = ""
 
     @IBOutlet weak var recLabel: UILabel!
     @IBOutlet weak var recImage: UIImageView!
@@ -64,8 +66,28 @@ class ModalViewController: UIViewController{
         if r == 38 {self.recLabel.text = "焼肉居酒屋えん"};
         if r == 39 {self.recLabel.text = "笑 ほお〜らしゃ"};
         if r == 40 {self.recLabel.text = "笠石ファミリーランド"};
-
-}
+        
+        recList.append(restImage[r])
+    }
+    
+    @IBAction func goDetail(_ sender: UIButton){
+        performSegue(withIdentifier: "showRec", sender: nil)
+    }
+    
+    func modalView(_ modalView: UIViewController,didselectedItemAt indexPath: IndexPath){
+        selectedRec = recList[indexPath.row]
+//        performSegue(withIdentifier: "showRec", sender: nil)
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+        if segue.identifier == "showRec"{
+            let dv = (segue.destination as? DetailViewController)!
+            dv.scSelectedRest = selectedRec
+        }
+        
+    }
+    
 
 override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()

@@ -114,6 +114,7 @@
 				14A21FF31F7BFE1C0070DDB2 /* ModalViewController.swift */,
 				146A44631F6E469D003A21C4 /* Main.storyboard */,
 				143730591F80F924009DD479 /* TestCollectionReusableView.swift */,
+				1412DAE71F90A8B000DD39BF /* CustomTableViewCell.swift */,
 				146A44661F6E469E003A21C4 /* Assets.xcassets */,
 				146A44681F6E469E003A21C4 /* LaunchScreen.storyboard */,
 				146A446B1F6E469E003A21C4 /* Info.plist */,
@@ -121,7 +122,6 @@
 				14F5448E1F709B4700984A71 /* actList.plist */,
 				144EE1571F77983B00CEE708 /* genreList.plist */,
 				145B88A71F8A3A4100BD3360 /* star.png */,
-				1412DAE71F90A8B000DD39BF /* CustomTableViewCell.swift */,
 			);
 			path = myProject;
 			sourceTree = "<group>";

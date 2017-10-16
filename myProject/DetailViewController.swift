@@ -16,6 +16,7 @@ class DetailViewController: UIViewController {
     var scSelectedRest = ""
     var scSelectedAct = ""
     
+    
     @IBAction func tapBack(_ sender: UIButton) {
         self.dismiss(animated: true, completion: {})
     }
@@ -102,7 +103,6 @@ class DetailViewController: UIViewController {
         }
     }
     
-    
     //タップして配列に追加
     @IBAction func tappedStar(_ sender: FaveButton){
         //空の配列を用意
@@ -118,7 +118,7 @@ class DetailViewController: UIViewController {
             favArr.append(scSelectedAct)
             }
             };upFlag = true
-        //配配列から消去
+        //配列から消去
         } else {if(scSelectedAct == "faArr"){
             self.myDefault.removeObject(forKey: "favArr")
         }; if (scSelectedRest == "favArr"){
