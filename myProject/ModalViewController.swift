@@ -76,7 +76,6 @@ class ModalViewController: UIViewController{
     
     func modalView(_ modalView: UIViewController,didselectedItemAt indexPath: IndexPath){
         selectedRec = recList[indexPath.row]
-//        performSegue(withIdentifier: "showRec", sender: nil)
     }
     
     

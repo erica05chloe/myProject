@@ -146,32 +146,32 @@ class SecondViewController: UIViewController,UICollectionViewDelegate,UICollecti
         // Dispose of any resources that can be recreated.
     }
     
-//    //addAnnotationした際に呼ばれるデリゲートメソッド.
-//
-//    func mapView(_ mapView: MKMapView!, viewFor annotation: MKAnnotation!) -> MKAnnotationView! {
-//
-//        // Identifier生成
-//        let myAnnotationIdentifier: NSString = "myAnnotation"
-//
-//        // アノテーション生成
-//        var myAnnotationView: MKAnnotationView!
-//
-//        // インスタンス化
-//        if myAnnotationView == nil {
-//
-//            myAnnotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: myAnnotationIdentifier as String)
-//
-//            // アノテーションに画像を追加.
-//        let myPin1 = MKAnnotationView()
-//        myPin1.myAnnotationView.leftCalloutAccessoryView = UIImageView(image: UIImage(named: "しゃーし"))
-//            myMap.addAnnotation(myPin1 as! MKAnnotation)
-//
-//            // アノテーションのコールアウトを許可.
-//            myAnnotationView.canShowCallout = true
-//        }
-//
-//        return myAnnotationView
-//    }
+    //addAnnotationした際に呼ばれるデリゲートメソッド.
+
+    func mapView(_ mapView: MKMapView!, viewFor annotation: MKAnnotation!) -> MKAnnotationView! {
+
+        // Identifier生成
+        let myAnnotationIdentifier: NSString = "myAnnotation"
+
+        // アノテーション生成
+        var myAnnotationView: MKAnnotationView!
+
+        // インスタンス化
+        if myAnnotationView == nil {
+
+            myAnnotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: myAnnotationIdentifier as String)
+
+            // アノテーションに画像を追加.
+        let myPin1 = MKAnnotationView()
+        myPin1.leftCalloutAccessoryView = UIImageView(image: UIImage(named: "しゃーし"))
+            myMap.addAnnotation(myPin1 as! MKAnnotation)
+
+            // アノテーションのコールアウトを許可.
+            myAnnotationView.canShowCallout = true
+        }
+
+        return myAnnotationView
+    }
 
 
 

@@ -15,15 +15,10 @@ class ThirdViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     var myDefault = UserDefaults.standard
     var favArr:[String] = []
     var selectedFav = ""
-//    var myImage: UIImage!
-//    var myImageView: UIImageView!
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        myTableView.register(MyCell.self, forCellReuseIdentifier: NSStringFromClass(MyCell.self))
-//        self.view.addSubview(myTableView)
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -44,8 +39,8 @@ class ThirdViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         func tableView(_ tableView:UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
             
             let cell:CustomTableViewCell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomTableViewCell
-            cell.cellImage.frame = CGRect(x:0, y:0, width:60, height:40)
-            cell.textLabel?.text = favArr[indexPath.row]
+
+            cell.cellText?.text = favArr[indexPath.row]
             
             //image表示する？
             let filePath = Bundle.main.path(forResource: "restaurantList", ofType: "plist")
@@ -54,11 +49,8 @@ class ThirdViewController: UIViewController,UITableViewDelegate,UITableViewDataS
             for(key,data) in dic!{
                 let dicForData:NSDictionary = data as! NSDictionary
                 if((key as! NSString) as String == favArr[indexPath.row]){
-//                    myImage = UIImage(named: dicForData["image"] as! String)
-//                    myImageView = UIImageView(image: myImage)
-//                    myTableView.addSubview(myImageView)
-            
-                cell.imageView?.image = UIImage(named:dicForData["image"] as! String)
+           
+                cell.cellImage?.image = UIImage(named:dicForData["image"] as! String)
 
                 }else{
                     let filePath = Bundle.main.path(forResource: "actList", ofType: "plist")
@@ -67,20 +59,14 @@ class ThirdViewController: UIViewController,UITableViewDelegate,UITableViewDataS
                     for(key,data) in dic!{
                         let dicForData:NSDictionary = data as! NSDictionary
                         if((key as! NSString) as String == favArr[indexPath.row]){
-                cell.imageView?.image = UIImage(named:dicForData["image"] as! String)
-
-//                            myImage = UIImage(named: dicForData["image"] as! String)
-//                            myImageView = UIImageView(image: myImage)
-//                            myTableView.addSubview(myImageView)
-                            
+                cell.cellImage?.image = UIImage(named:dicForData["image"] as! String)
+                          
 
                 }
               }
              }
                 
-//                myTableView.frame.width ==  -60
-//            cell.myImageView.frame = CGRect(x:0, y:0, width:60, height:40)
-        }
+       }
             return cell
     }
     
@@ -103,9 +89,25 @@ class ThirdViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     override func prepare(for segue: UIStoryboardSegue, sender: Any!){
         if segue.identifier == "showFavDetail" {
             let dv = (segue.destination as? DetailViewController)!
+                
+                let filePath = Bundle.main.path(forResource: "restaurantList", ofType: "plist")
+                let dic = NSDictionary(contentsOfFile:filePath!)
+                
+                dv.scSelectedRest = ""
+                dv.scSelectedAct = ""
+                
+                for(key,data) in dic!{
+
+                if((key as! NSString) as String == selectedFav){
+        
             dv.scSelectedRest = selectedFav
-   
+                    }
         }
+                    
+                    if dv.scSelectedRest == "" {
+                        dv.scSelectedAct = selectedFav
+                    }
+            }
     }
     
     
@@ -115,61 +117,6 @@ class ThirdViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     }
 }
 
-//class MyCell: UITableViewCell {
-//    var myLabel: UILabel!
-//    var myImage: UIImage!
-//    var myImageView: UIImageView!
-//    var favArr:[String] = []
-//
-//    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-//        super.init(style: style, reuseIdentifier: reuseIdentifier)
-//
-//    }
-
-//    func tableViewCell(_ tableView:UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-//
-//        let filePath = Bundle.main.path(forResource: "restaurantList", ofType: "plist")
-//        let dic = NSDictionary(contentsOfFile:filePath!)
-//
-//        for(key,data) in dic!{
-//            let dicForData:NSDictionary = data as! NSDictionary
-//            if((key as! NSString) as String == favArr[indexPath.row]){
-//                myImage = UIImage(named: dicForData["image"] as! String)
-//                myImageView = UIImageView(image: myImage)
-//                contentView.addSubview(myImageView)
-//
-//            }else{
-//                let filePath = Bundle.main.path(forResource: "actList", ofType: "plist")
-//                let dic = NSDictionary(contentsOfFile:filePath!)
-//
-//                for(key,data) in dic!{
-//                    let dicForData:NSDictionary = data as! NSDictionary
-//                    if((key as! NSString) as String == favArr[indexPath.row]){
-//                        myImage = UIImage(named: dicForData["image"] as! String)
-//                        myImageView = UIImageView(image: myImage)
-//                        contentView.addSubview(myImageView)
-//                    }
-//                }
-//            }
-//        }
-//        return cell
-//    }
-    
-//    required init(coder aDecoder: NSCoder) {
-//        fatalError("init(coder: ) has not been implemented")
-//    }
-//
-//    override func prepareForReuse() {
-//        super.prepareForReuse()
-//    }
-//
-//    override func layoutSubviews() {
-//        super.layoutSubviews()
-//        myImageView.frame = CGRect(x: 0, y: 0, width: 60, height: frame.height)
-//    }
-    
-//}
 
 
 

@@ -422,10 +422,18 @@
                                                     <rect key="frame" x="8" y="-1" width="60" height="44"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCN-ga-P1T">
+                                                    <rect key="frame" x="76" y="0.0" width="291" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="cellImage" destination="GAX-e9-Iy8" id="Wav-uB-Nbl"/>
+                                            <outlet property="cellText" destination="xCN-ga-P1T" id="3tl-t6-3qE"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -482,6 +490,6 @@
         <image name="star" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cRQ-IF-4IA"/>
+        <segue reference="Q77-rI-hNv"/>
     </inferredMetricsTieBreakers>
 </document>

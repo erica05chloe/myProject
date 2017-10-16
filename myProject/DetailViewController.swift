@@ -108,6 +108,9 @@ class DetailViewController: UIViewController {
         //空の配列を用意
         var favArr:[String] = []
         
+//        if myDefault.object(forKey: "upFlag") != nil {
+//            myDefault.object(forKey: "upFlag") as! Bool
+//        }
         //配列に追加
         if upFlag {
         if myDefault.object(forKey: "favArr") != nil{do {
@@ -123,12 +126,11 @@ class DetailViewController: UIViewController {
             self.myDefault.removeObject(forKey: "favArr")
         }; if (scSelectedRest == "favArr"){
             self.myDefault.removeObject(forKey: "favArr")
-                }
+            }
             upFlag = false
         }
         myDefault.set(favArr, forKey: "favArr")
         self.myDefault.synchronize()
-        
     }
 
     
