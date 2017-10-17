@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		03E4B537ED6367A2CB93117B /* Pods_myProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 225B0E4855EC13938D42D9E8 /* Pods_myProject.framework */; };
 		1412DAE81F90A8B000DD39BF /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1412DAE71F90A8B000DD39BF /* CustomTableViewCell.swift */; };
+		1425FEEA1F956D7700DC496E /* scModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1425FEE91F956D7700DC496E /* scModalViewController.swift */; };
+		1425FEEC1F95800600DC496E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1425FEEB1F95800600DC496E /* MapKit.framework */; };
 		1437305A1F80F924009DD479 /* TestCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143730591F80F924009DD479 /* TestCollectionReusableView.swift */; };
 		144EE1581F77983C00CEE708 /* genreList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 144EE1571F77983B00CEE708 /* genreList.plist */; };
 		145B88A61F8A338A00BD3360 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 145B88A51F8A338900BD3360 /* CoreLocation.framework */; };
@@ -28,10 +30,11 @@
 
 /* Begin PBXFileReference section */
 		1412DAE71F90A8B000DD39BF /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		1425FEE91F956D7700DC496E /* scModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scModalViewController.swift; sourceTree = "<group>"; };
+		1425FEEB1F95800600DC496E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		143730591F80F924009DD479 /* TestCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCollectionReusableView.swift; sourceTree = "<group>"; };
 		144EE1571F77983B00CEE708 /* genreList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = genreList.plist; sourceTree = "<group>"; };
 		145B88A51F8A338900BD3360 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		145B88A71F8A3A4100BD3360 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
 		146A445A1F6E469D003A21C4 /* myProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		146A445D1F6E469D003A21C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		146A445F1F6E469D003A21C4 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1425FEEC1F95800600DC496E /* MapKit.framework in Frameworks */,
 				145B88A61F8A338A00BD3360 /* CoreLocation.framework in Frameworks */,
 				03E4B537ED6367A2CB93117B /* Pods_myProject.framework in Frameworks */,
 			);
@@ -77,6 +81,7 @@
 		145B88A41F8A338800BD3360 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1425FEEB1F95800600DC496E /* MapKit.framework */,
 				14CBD7BD1F8E94D900F84EDC /* project.xcworkspace */,
 				145B88A51F8A338900BD3360 /* CoreLocation.framework */,
 				225B0E4855EC13938D42D9E8 /* Pods_myProject.framework */,
@@ -112,6 +117,7 @@
 				146A44711F6E483C003A21C4 /* ThirdViewController.swift */,
 				146A44771F6E5859003A21C4 /* DetailViewController.swift */,
 				14A21FF31F7BFE1C0070DDB2 /* ModalViewController.swift */,
+				1425FEE91F956D7700DC496E /* scModalViewController.swift */,
 				146A44631F6E469D003A21C4 /* Main.storyboard */,
 				143730591F80F924009DD479 /* TestCollectionReusableView.swift */,
 				1412DAE71F90A8B000DD39BF /* CustomTableViewCell.swift */,
@@ -121,7 +127,6 @@
 				146A44791F6E5E3E003A21C4 /* restaurantList.plist */,
 				14F5448E1F709B4700984A71 /* actList.plist */,
 				144EE1571F77983B00CEE708 /* genreList.plist */,
-				145B88A71F8A3A4100BD3360 /* star.png */,
 			);
 			path = myProject;
 			sourceTree = "<group>";
@@ -259,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1425FEEA1F956D7700DC496E /* scModalViewController.swift in Sources */,
 				1412DAE81F90A8B000DD39BF /* CustomTableViewCell.swift in Sources */,
 				14CBD7C81F8E9C4E00F84EDC /* DOFavoriteButton.swift in Sources */,
 				146A44621F6E469D003A21C4 /* SecondViewController.swift in Sources */,

@@ -146,33 +146,69 @@ class SecondViewController: UIViewController,UICollectionViewDelegate,UICollecti
         // Dispose of any resources that can be recreated.
     }
     
-    //addAnnotationした際に呼ばれるデリゲートメソッド.
+    //pin_tapで画像だしたい
+//    func myMap(_ myMap: MKMapView, regionWillChangeAnimated animated: Bool) {
+//        print(#function)
+//    }
 
-    func mapView(_ mapView: MKMapView!, viewFor annotation: MKAnnotation!) -> MKAnnotationView! {
+    // Called when the annotation was added
+    func myMap(_ myMap: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if annotation is MKUserLocation {
+            return nil
+        }
+        let reuseId = "pin"
+        var pinView = myMap.dequeueReusableAnnotationView(withIdentifier: reuseId) as? MKPinAnnotationView
+        if pinView == nil {
+            pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+            pinView?.canShowCallout = true
+            let rightButton: AnyObject! = UIButton(type: UIButtonType.detailDisclosure)
+            pinView?.rightCalloutAccessoryView = rightButton as? UIView
 
-        // Identifier生成
-        let myAnnotationIdentifier: NSString = "myAnnotation"
 
-        // アノテーション生成
-        var myAnnotationView: MKAnnotationView!
-
-        // インスタンス化
-        if myAnnotationView == nil {
-
-            myAnnotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: myAnnotationIdentifier as String)
-
-            // アノテーションに画像を追加.
-        let myPin1 = MKAnnotationView()
-        myPin1.leftCalloutAccessoryView = UIImageView(image: UIImage(named: "しゃーし"))
-            myMap.addAnnotation(myPin1 as! MKAnnotation)
-
-            // アノテーションのコールアウトを許可.
-            myAnnotationView.canShowCallout = true
+        }
+        else {
+            pinView?.annotation = annotation
         }
 
-        return myAnnotationView
+        return pinView
     }
+    private func myMap(_ myMap: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        print(#function)
+        if control == view.rightCalloutAccessoryView {
+            performSegue(withIdentifier: "showBeach", sender: self)
+
+        }
+    }
+    
+    
+//    //addAnnotationした際に呼ばれるデリゲートメソッド.
+//
+//    func mapView(_ mapView: MKMapView!, viewFor annotation: MKAnnotation!) -> MKAnnotationView! {
+//
+//        // Identifier生成
+//        let myAnnotationIdentifier: NSString = "myAnnotation"
+//
+//        // アノテーション生成
+//        var myAnnotationView: MKAnnotationView!
+//
+//        // インスタンス化
+//        if myAnnotationView == nil {
+//
+//            myAnnotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: myAnnotationIdentifier as String)
+//
+//            // アノテーションに画像を追加.
+//        let myPin1 = MKAnnotationView()
+//        myPin1.leftCalloutAccessoryView = UIImageView(image: UIImage(named: "しゃーし"))
+//            myMap.addAnnotation(myPin1 as! MKAnnotation)
+//
+//            // アノテーションのコールアウトを許可.
+//            myAnnotationView.canShowCallout = true
+//        }
+//
+//        return myAnnotationView
+//    }
 
 
 
 }
+

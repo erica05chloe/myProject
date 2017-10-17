@@ -26,7 +26,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var myInform: UITextView!
     @IBOutlet weak var myDesc: UITextView!
     @IBOutlet weak var myMap: MKMapView!
-    
+    @IBOutlet weak var favBtn: FaveButton!
     
     var myDefault = UserDefaults.standard
     var upFlag:Bool = true  //false not tap / true tapped
@@ -101,37 +101,65 @@ class DetailViewController: UIViewController {
                     }
             }
         }
+        
+        
+        //星の状態を設定
+        favBtn.isSelected = false
+        
+        //空の配列を用意
+        var favArr:[String] = []
+        
+        if myDefault.object(forKey: "favArr") != nil{
+            favArr = myDefault.object(forKey: "favArr") as! [String]
+            
+        }
+        
+        for i in favArr{
+            print(i)
+            
+            if myLabel.text == i {
+                favBtn.isSelected = true
+            }
+        }
+
     }
     
     //タップして配列に追加
     @IBAction func tappedStar(_ sender: FaveButton){
-        //空の配列を用意
-        var favArr:[String] = []
         
-//        if myDefault.object(forKey: "upFlag") != nil {
-//            myDefault.object(forKey: "upFlag") as! Bool
-//        }
+        //空の配列
+       var favArr:[String] = []
+        
         //配列に追加
-        if upFlag {
-        if myDefault.object(forKey: "favArr") != nil{do {
-            favArr = myDefault.object(forKey: "favArr") as! [String] }
+        if myDefault.object(forKey: "favArr") != nil{
+            favArr = myDefault.object(forKey: "favArr") as! [String]
+        }
         if (scSelectedAct == ""){
             favArr.append(scSelectedRest)
-        }; if (scSelectedRest == ""){
+            
+        }else{
             favArr.append(scSelectedAct)
-            }
-            };upFlag = true
-        //配列から消去
-        } else {if(scSelectedAct == "faArr"){
-            self.myDefault.removeObject(forKey: "favArr")
-        }; if (scSelectedRest == "favArr"){
-            self.myDefault.removeObject(forKey: "favArr")
-            }
-            upFlag = false
         }
+        
         myDefault.set(favArr, forKey: "favArr")
         self.myDefault.synchronize()
+        
     }
+    
+    
+    func favBtn(_ favBtn: FaveButton,didSelectRowAtIndexPath indexPath: NSIndexPath){
+        
+        var favArr:[String] = []
+        
+        if favBtn.isSelected == false{
+            favArr.remove(at: indexPath.row)
+            self.myDefault.removeObject(forKey: "favArr")
+            self.myDefault.synchronize()
+        }
+        
+        
+        }
+    
 
     
     override func didReceiveMemoryWarning() {

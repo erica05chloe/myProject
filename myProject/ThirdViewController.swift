@@ -11,6 +11,7 @@ import UIKit
 class ThirdViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     @IBOutlet weak var myTableView: UITableView!
+    @IBOutlet weak var tableImage: UIImageView!
     
     var myDefault = UserDefaults.standard
     var favArr:[String] = []
@@ -19,6 +20,7 @@ class ThirdViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        tableImage.image = UIImage(named: "top")
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -67,17 +67,13 @@ class ModalViewController: UIViewController{
         if r == 39 {self.recLabel.text = "笑 ほお〜らしゃ"};
         if r == 40 {self.recLabel.text = "笠石ファミリーランド"};
         
-        recList.append(restImage[r])
+//        recList.append(restImage[r])
     }
     
     @IBAction func goDetail(_ sender: UIButton){
+        selectedRec = (recLabel.text)!
         performSegue(withIdentifier: "showRec", sender: nil)
     }
-    
-    func modalView(_ modalView: UIViewController,didselectedItemAt indexPath: IndexPath){
-        selectedRec = recList[indexPath.row]
-    }
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
         if segue.identifier == "showRec"{
