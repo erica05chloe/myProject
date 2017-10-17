@@ -4,6 +4,22 @@
 <dict>
 	<key>居酒屋</key>
 	<dict>
+		<key>若大将</key>
+		<dict>
+			<key>inform</key>
+			<string>0997-93-5270
+17:00〜23:00
+定休日：日曜日
+</string>
+			<key>description</key>
+			<string>知名町にある居酒屋で、地元の人で賑わっています。名物の黒糖焼酎や地元の魚料理などが楽しめます。料理もお酒も美味しく、価格もリーズナブル！</string>
+			<key>image</key>
+			<string>waka.jpg</string>
+			<key>latitude</key>
+			<string>27.332576</string>
+			<key>longitude</key>
+			<string>128.577866</string>
+		</dict>
 		<key>居酒屋　なな彩</key>
 		<dict>
 			<key>inform</key>
@@ -99,12 +115,42 @@
 	</dict>
 	<key>カフェ</key>
 	<dict>
+		<key>SWEET KITCHEN</key>
+		<dict>
+			<key>inform</key>
+			<string>090-7478-9918
+9:00～18:00
+定休日：月曜日・火曜日</string>
+			<key>description</key>
+			<string>どこか懐かしさを感じるカフェ。食材は国産にこだわり、野菜は地元の旬のものを使った日替わりランチが人気です。定期的にパン作り教室も開かれています。</string>
+			<key>image</key>
+			<string>sweet.jpg</string>
+			<key>latitude</key>
+			<string>27.394962</string>
+			<key>longitude</key>
+			<string>128.654561</string>
+		</dict>
+		<key>Reborn</key>
+		<dict>
+			<key>inform</key>
+			<string>090-9571-1410
+10:00～17:00
+定休日：水・日曜日</string>
+			<key>description</key>
+			<string>沖永良部島産の野菜やフルーツを使用したスムージー。注文を受けてからその場で作るスムージーは、香りもフレッシュで色も鮮やか！お急ぎの方はLINEやお電話にて事前注文も承ります。LINE　ID：reborn1962</string>
+			<key>image</key>
+			<string>re.jpg</string>
+			<key>latitude</key>
+			<string>27.340842</string>
+			<key>longitude</key>
+			<string>128.584468</string>
+		</dict>
 		<key>ティザーヌ</key>
 		<dict>
 			<key>inform</key>
 			<string>0997-93-2277
 11:30～18:00
-定休日：木・金曜日</string>
+定休日：木曜日・金曜日</string>
 			<key>description</key>
 			<string>できるだけ身体に優しいものを、と減農薬の野菜や十五穀米を使用。スイーツにも白砂糖を使用せずに島のきび砂糖を使うこだわり。</string>
 			<key>image</key>
@@ -207,6 +253,21 @@
 	</dict>
 	<key>島料理</key>
 	<dict>
+		<key>南海</key>
+		<dict>
+			<key>inform</key>
+			<string>0997-93-2780
+11:00〜14:00/17:00〜23:00
+定休日：火曜日</string>
+			<key>description</key>
+			<string>新鮮な島魚・イセエビ料理が食べられるお店。ご主人が漁をしているので、鮮度抜群の海の幸を低価格で食べられます！お刺身をはじめ、寿司、唐揚げ、煮付けなど、様々な魚料理が堪能できます。</string>
+			<key>image</key>
+			<string>nan.jpg</string>
+			<key>latitude</key>
+			<string>27.334209</string>
+			<key>longitude</key>
+			<string>128.580493</string>
+		</dict>
 		<key>左馬</key>
 		<dict>
 			<key>inform</key>
@@ -439,6 +500,21 @@
 	</dict>
 	<key>中華</key>
 	<dict>
+		<key>前田工房</key>
+		<dict>
+			<key>inform</key>
+			<string>0997-92-1630
+11:30～14:00/17:30～21:30
+定休日：木曜日</string>
+			<key>description</key>
+			<string>鹿児島銀行のそばの県道沿いにあります。店舗横には駐車場もあるので利用しやすいお店です！オーソドックスな中華料理が豊富でマーボー豆腐や、エビチリ、酢豚にラーメンなどの麺類が中心です。</string>
+			<key>image</key>
+			<string>maeda.jpg</string>
+			<key>latitude</key>
+			<string>27.389921</string>
+			<key>longitude</key>
+			<string>128.654767</string>
+		</dict>
 		<key>中華料理来来</key>
 		<dict>
 			<key>inform</key>
@@ -588,7 +664,7 @@
 			<key>inform</key>
 			<string>080-2794-0808
 11:00～14:00/18:30～
-不定休</string>
+定休日：不定休</string>
 			<key>description</key>
 			<string>えらぶ牛は数量限定！特別な日には特別なお肉を食べましょう♪海の見えるcafeで島のイケメン揃えてお待ちしてます！</string>
 			<key>image</key>

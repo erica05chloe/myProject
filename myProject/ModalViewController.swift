@@ -11,7 +11,7 @@ import UIKit
 
 class ModalViewController: UIViewController{
 
-    var restImage = ["party","fam","level","les","typhoon","buera","free","gusto","saigou","ouchi","terumani","abashi","akuru","thiza","pure","seriyosa","rai","katuo","tougura","haisai","sasagawa","kaikou","furusato","zen","rihu","sky","kiyoi","nana","kagura","sou","ikki","dou","sama","shunkou","shou","kaihou","shiosai","taiko","en","hoo","kasa"]
+    var restImage = ["party","fam","level","les","typhoon","buera","free","gusto","saigou","ouchi","terumani","abashi","akuru","thiza","pure","seriyosa","rai","katuo","tougura","haisai","sasagawa","kaikou","furusato","zen","rihu","sky","kiyoi","nana","kagura","sou","ikki","dou","sama","shunkou","shou","kaihou","shiosai","taiko","en","hoo","kasa","maeda","waka","nan","sweet","re"]
     var recList:[String] = []
     var selectedRec = ""
 
@@ -66,6 +66,11 @@ class ModalViewController: UIViewController{
         if r == 38 {self.recLabel.text = "焼肉居酒屋えん"};
         if r == 39 {self.recLabel.text = "笑 ほお〜らしゃ"};
         if r == 40 {self.recLabel.text = "笠石ファミリーランド"};
+        if r == 41 {self.recLabel.text = "前田工房"};
+        if r == 42 {self.recLabel.text = "若大将"};
+        if r == 43 {self.recLabel.text = "南海"};
+        if r == 44 {self.recLabel.text = "Sweet Kitchen"};
+        if r == 45 {self.recLabel.text = "Rebore"};
         
 //        recList.append(restImage[r])
     }
