@@ -134,31 +134,47 @@ class DetailViewController: UIViewController {
         if myDefault.object(forKey: "favArr") != nil{
             favArr = myDefault.object(forKey: "favArr") as! [String]
         }
-        if (scSelectedAct == ""){
+        
+        if favBtn.isSelected {
+          if (scSelectedAct == ""){
             favArr.append(scSelectedRest)
             
-        }else{
+          }else{
             favArr.append(scSelectedAct)
-        }
+          }
+     
+        //配列から消去
+    }else{
+        if (scSelectedAct == ""){
+            var i = 0
+            for fav in favArr {
+    
+                if fav == scSelectedRest {
+                    favArr.remove(at: i)
+                }else{
+                    i += 1
+                }
+         }
+    
+        }else{
+            var i = 0
+            for fav in favArr {
+    
+            if fav == scSelectedAct {
+                favArr.remove(at: i)
+            }else{
+                i += 1
+            }
+          }
+     }
+    
+    }
         
+
         myDefault.set(favArr, forKey: "favArr")
         self.myDefault.synchronize()
         
     }
-    
-    
-    func favBtn(_ favBtn: FaveButton,didSelectRowAtIndexPath indexPath: NSIndexPath){
-        
-        var favArr:[String] = []
-        
-        if favBtn.isSelected == false{
-            favArr.remove(at: indexPath.row)
-            self.myDefault.removeObject(forKey: "favArr")
-            self.myDefault.synchronize()
-        }
-        
-        
-        }
     
 
     
@@ -166,5 +182,4 @@ class DetailViewController: UIViewController {
         super.didReceiveMemoryWarning()
         
     }
-
 }

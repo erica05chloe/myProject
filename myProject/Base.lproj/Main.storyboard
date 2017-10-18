@@ -129,7 +129,7 @@
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="Pvy-fi-JY8" secondAttribute="bottom" id="nR5-YR-iYR"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="EAT" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="EAT" image="b" id="acW-dT-cKf"/>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -453,7 +453,7 @@
                             <constraint firstItem="QL7-Ej-jUB" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="top" id="rTg-Ub-bjd"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="ACT" image="first" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="ACT" image="c" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="actCollection" destination="nVG-fB-osC" id="wTb-hs-LSr"/>
                         <outlet property="myMap" destination="QL7-Ej-jUB" id="WtP-mF-7jF"/>
@@ -465,7 +465,7 @@
             </objects>
             <point key="canvasLocation" x="749.60000000000002" y="428.63568215892059"/>
         </scene>
-        <!--Third View Controller-->
+        <!--FAV-->
         <scene sceneID="V3z-xj-yIX">
             <objects>
                 <viewController id="raP-b9-LUv" customClass="ThirdViewController" customModule="myProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -541,7 +541,7 @@
                             <constraint firstItem="ug1-7L-pqG" firstAttribute="leading" secondItem="Kph-eS-ZJm" secondAttribute="leading" id="zgx-hm-Ite"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" selectedImage="kame" systemItem="favorites" id="8XA-d5-Qpj"/>
+                    <tabBarItem key="tabBarItem" title="FAV" image="d" id="8XA-d5-Qpj"/>
                     <connections>
                         <outlet property="myTableView" destination="kgG-2w-mDp" id="H3A-Jc-V4L"/>
                         <outlet property="tableImage" destination="ug1-7L-pqG" id="Xto-qC-4uT"/>
@@ -617,12 +617,13 @@
     </scenes>
     <resources>
         <image name="a" width="225" height="225"/>
-        <image name="first" width="30" height="30"/>
-        <image name="kame" width="24" height="23"/>
+        <image name="b" width="37" height="37"/>
+        <image name="c" width="37" height="37"/>
+        <image name="d" width="37" height="37"/>
         <image name="star" width="128" height="128"/>
         <image name="top" width="1180" height="380"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cRQ-IF-4IA"/>
+        <segue reference="aZP-du-Lyn"/>
     </inferredMetricsTieBreakers>
 </document>

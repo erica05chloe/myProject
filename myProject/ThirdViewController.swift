@@ -75,6 +75,7 @@ class ThirdViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     // すわいぷで消去
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let deleteButton: UITableViewRowAction = UITableViewRowAction(style: .normal, title: "delete"){(action, index) -> Void in self.favArr.remove(at: indexPath.row)
+            self.myDefault.set(self.favArr, forKey:"favArr")
         tableView.deleteRows(at: [indexPath], with: .fade)
 //            self.myDefault.removeObject(forKey: "favArr")
             self.myDefault.synchronize()
