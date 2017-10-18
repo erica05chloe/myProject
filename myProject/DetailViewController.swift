@@ -29,7 +29,6 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var favBtn: FaveButton!
     
     var myDefault = UserDefaults.standard
-    var upFlag:Bool = true  //false not tap / true tapped
     
     override func viewDidLoad() {
         super.viewDidLoad()
