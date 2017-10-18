@@ -160,25 +160,25 @@ class FirstViewController: UIViewController,UICollectionViewDelegate,UICollectio
         switch(section){
         case 0:
             
-            return 7
+            return rI.count
             
         case 1:
-            return 9
+            return rI2.count
             
         case 2:
-            return 12
+            return rI3.count
             
         case 3:
-            return 4
+            return rI4.count
             
         case 4:
-            return 2
+            return rI5.count
             
         case 5:
-            return 6
+            return rI6.count
             
         case 6:
-            return 6
+            return rI7.count
             
         default:
             print("error")
