@@ -10,11 +10,14 @@ import Foundation
 import UIKit
 import MapKit
 import FaveButton
+import CoreLocation
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate{
     
     var scSelectedRest = ""
     var scSelectedAct = ""
+    
+    var myLocationManager: CLLocationManager!
     
     
     @IBAction func tapBack(_ sender: UIButton) {
@@ -29,10 +32,31 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var favBtn: FaveButton!
     
     var myDefault = UserDefaults.standard
-    var upFlag:Bool = true  //false not tap / true tapped
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //現在地をだす準備
+        myLocationManager = CLLocationManager()
+        myLocationManager.delegate = self
+        myLocationManager.distanceFilter = 100.0
+        myLocationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+
+        //セキュリティ認証
+        let status = CLLocationManager.authorizationStatus()
+        
+        if(status != CLAuthorizationStatus.authorizedWhenInUse) {
+            
+            print("not determined")
+            
+            myLocationManager.requestWhenInUseAuthorization()
+        }
+
+        //位置情報の更新
+        myLocationManager.startUpdatingLocation()
+
+        myMap.delegate = self
 
         if scSelectedAct == "" {
             
@@ -99,8 +123,79 @@ class DetailViewController: UIViewController {
                         myPin.coordinate = coordinate
                         myMap.addAnnotation(myPin)
                     }
+            
             }
         }
+            
+            // GPSから値を取得した際に呼び出されるメソッド.
+            func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+                
+                print("didUpdateLocations")
+                
+                
+                for location in locations {
+                    
+                    //中心座標
+                    let center = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
+                    
+                    //表示範囲
+                    let span = MKCoordinateSpanMake(0.07, 0.07)
+                    
+                    //中心座標と表示範囲をmymapに登録
+                    let region = MKCoordinateRegionMake(center, span)
+                    myMap.setRegion(region, animated:true)
+                    
+                    //ピンを作成してmymapに登録
+                    let annotation = MKPointAnnotation()
+                    annotation.coordinate = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
+                    myMap.addAnnotation(annotation)
+                    
+                }
+        }
+
+//                // 配列から現在座標を取得.
+//                let myLocations: NSArray = locations as NSArray
+//                let myLastLocation: CLLocation = myLocations.lastObject as! CLLocation
+//                let myLocation:CLLocationCoordinate2D = myLastLocation.coordinate
+//
+//                print("\(myLocation.latitude), \(myLocation.longitude)")
+//
+//                let myLat: CLLocationDegrees = 27.366219
+//                let myLon: CLLocationDegrees = 128.600533
+//                let myCoordinate: CLLocationCoordinate2D = CLLocationCoordinate2DMake(myLat, myLon) as CLLocationCoordinate2D
+//
+//
+//                let myLatDist : CLLocationDistance = 100
+//                let myLonDist : CLLocationDistance = 100
+//
+//                let region: MKCoordinateRegion = MKCoordinateRegionMakeWithDistance(myLocation, myLatDist, myLonDist);
+//
+//                myMap.setRegion(region, animated: true)
+//            }
+            
+            // Regionが変更した時に呼び出されるメソッド.
+            func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
+                print("regionDidChangeAnimated")
+            }
+            
+            // 認証が変更された時に呼び出されるメソッド.
+            func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+                switch status{
+                case .authorizedWhenInUse:
+                    print("AuthorizedWhenInUse")
+                case .authorized:
+                    print("Authorized")
+                case .denied:
+                    print("Denied")
+                case .restricted:
+                    print("Restricted")
+                case .notDetermined:
+                    print("NotDetermined")
+                case .authorizedAlways:
+                    print("AuthorizedAlways")
+                }
+            }
+
         
         
         //星の状態を設定
