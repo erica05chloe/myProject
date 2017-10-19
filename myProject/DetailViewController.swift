@@ -32,7 +32,7 @@ class DetailViewController: UIViewController, MKMapViewDelegate, CLLocationManag
     @IBOutlet weak var favBtn: FaveButton!
     
     var myDefault = UserDefaults.standard
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
